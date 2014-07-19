@@ -23,6 +23,8 @@
 		492916DD197A937C002AB7F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 492916DB197A937C002AB7F8 /* InfoPlist.strings */; };
 		492916DF197A937C002AB7F8 /* ComadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916DE197A937C002AB7F8 /* ComadTests.m */; };
 		492916E9197A93CC002AB7F8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */; };
+		492916EC197AD2EE002AB7F8 /* CMDHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916EB197AD2EE002AB7F8 /* CMDHomeTableViewController.m */; };
+		492916F5197AD760002AB7F8 /* CMDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916F4197AD760002AB7F8 /* CMDConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		492916DC197A937C002AB7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492916DE197A937C002AB7F8 /* ComadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComadTests.m; sourceTree = "<group>"; };
 		492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		492916EA197AD2EE002AB7F8 /* CMDHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHomeTableViewController.h; sourceTree = "<group>"; };
+		492916EB197AD2EE002AB7F8 /* CMDHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHomeTableViewController.m; sourceTree = "<group>"; };
+		492916F4197AD760002AB7F8 /* CMDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +122,8 @@
 		492916BB197A937C002AB7F8 /* Comad */ = {
 			isa = PBXGroup;
 			children = (
-				492916C4197A937C002AB7F8 /* CMDAppDelegate.h */,
-				492916C5197A937C002AB7F8 /* CMDAppDelegate.m */,
-				492916CA197A937C002AB7F8 /* Images.xcassets */,
-				492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */,
-				492916C7197A937C002AB7F8 /* Comad.xcdatamodeld */,
+				492916ED197AD333002AB7F8 /* Classes */,
+				492916EE197AD341002AB7F8 /* Resources */,
 				492916BC197A937C002AB7F8 /* Supporting Files */,
 			);
 			path = Comad;
@@ -136,6 +138,7 @@
 				492916C3197A937C002AB7F8 /* Comad-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		492916D8197A937C002AB7F8 /* ComadTests */ = {
@@ -154,6 +157,69 @@
 				492916DB197A937C002AB7F8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		492916ED197AD333002AB7F8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				492916C4197A937C002AB7F8 /* CMDAppDelegate.h */,
+				492916C5197A937C002AB7F8 /* CMDAppDelegate.m */,
+				492916F4197AD760002AB7F8 /* CMDConstants.m */,
+				492916F3197AD749002AB7F8 /* Extentions */,
+				492916EF197AD368002AB7F8 /* Controllers */,
+				492916F1197AD3A8002AB7F8 /* Models */,
+				492916F2197AD733002AB7F8 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		492916EE197AD341002AB7F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				492916F0197AD383002AB7F8 /* StoryBoards */,
+				492916CA197A937C002AB7F8 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		492916EF197AD368002AB7F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492916EA197AD2EE002AB7F8 /* CMDHomeTableViewController.h */,
+				492916EB197AD2EE002AB7F8 /* CMDHomeTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		492916F0197AD383002AB7F8 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */,
+			);
+			name = StoryBoards;
+			path = Resources/StoryBoards;
+			sourceTree = "<group>";
+		};
+		492916F1197AD3A8002AB7F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				492916C7197A937C002AB7F8 /* Comad.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		492916F2197AD733002AB7F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		492916F3197AD749002AB7F8 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +322,8 @@
 				492916C2197A937C002AB7F8 /* main.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				492916C6197A937C002AB7F8 /* CMDAppDelegate.m in Sources */,
+				492916F5197AD760002AB7F8 /* CMDConstants.m in Sources */,
+				492916EC197AD2EE002AB7F8 /* CMDHomeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,8 +441,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Comad/Comad-Prefix.pch";
-				INFOPLIST_FILE = "Comad/Comad-Info.plist";
+				GCC_PREFIX_HEADER = "Comad/SupportingFiles/Comad-Prefix.pch";
+				INFOPLIST_FILE = "Comad/SupportingFiles/Comad-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,8 +454,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Comad/Comad-Prefix.pch";
-				INFOPLIST_FILE = "Comad/Comad-Info.plist";
+				GCC_PREFIX_HEADER = "Comad/SupportingFiles/Comad-Prefix.pch";
+				INFOPLIST_FILE = "Comad/SupportingFiles/Comad-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

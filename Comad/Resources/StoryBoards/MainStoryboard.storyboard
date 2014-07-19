@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - タイムライン-->
+        <!--Home Table View Controller - タイムライン-->
         <scene sceneID="R1L-D4-Qbb">
             <objects>
-                <tableViewController id="l1k-ef-bAM" sceneMemberID="viewController">
+                <tableViewController id="l1k-ef-bAM" customClass="CMDHomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2RI-gb-spt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK6-RC-fMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="50"/>
+            <point key="canvasLocation" x="1124" y="50"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BYd-cT-cdE">
@@ -1204,7 +1204,7 @@
                 <customObject id="6Ld-w4-YxX"/>
                 <tapGestureRecognizer id="eG5-zk-UzH"/>
             </objects>
-            <point key="canvasLocation" x="-277" y="43"/>
+            <point key="canvasLocation" x="-217" y="31"/>
         </scene>
         <!--Table View Controller - 設定-->
         <scene sceneID="vA2-dp-N3Z">
@@ -1544,7 +1544,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXN-90-drT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="881"/>
+            <point key="canvasLocation" x="898" y="881"/>
         </scene>
         <!--Table View Controller - 上映中の映画-->
         <scene sceneID="tst-IN-hmr">
@@ -2295,7 +2295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyt-Bg-gA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="-692"/>
+            <point key="canvasLocation" x="2854" y="-692"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gec-Pc-5UU">
@@ -2366,7 +2366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmX-91-n4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="50"/>
+            <point key="canvasLocation" x="2443" y="26"/>
         </scene>
         <!--Table View Controller - 浅野 友希さんの今までに見た作品-->
         <scene sceneID="KMV-n7-1E8">
@@ -2468,7 +2468,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqI-4a-lzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="358"/>
+            <point key="canvasLocation" x="2865" y="366"/>
         </scene>
         <!--Table View Controller - フォロー(3)-->
         <scene sceneID="5A5-1g-thL">
@@ -2637,7 +2637,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNV-oe-6gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2468" y="358"/>
+            <point key="canvasLocation" x="2443" y="366"/>
         </scene>
     </scenes>
     <resources>
