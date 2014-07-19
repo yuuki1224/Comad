@@ -22,6 +22,7 @@
 		492916D5197A937C002AB7F8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492916B9197A937C002AB7F8 /* CoreData.framework */; };
 		492916DD197A937C002AB7F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 492916DB197A937C002AB7F8 /* InfoPlist.strings */; };
 		492916DF197A937C002AB7F8 /* ComadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916DE197A937C002AB7F8 /* ComadTests.m */; };
+		492916E9197A93CC002AB7F8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		492916DA197A937C002AB7F8 /* ComadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComadTests-Info.plist"; sourceTree = "<group>"; };
 		492916DC197A937C002AB7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492916DE197A937C002AB7F8 /* ComadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComadTests.m; sourceTree = "<group>"; };
+		492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				492916C4197A937C002AB7F8 /* CMDAppDelegate.h */,
 				492916C5197A937C002AB7F8 /* CMDAppDelegate.m */,
 				492916CA197A937C002AB7F8 /* Images.xcassets */,
+				492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */,
 				492916C7197A937C002AB7F8 /* Comad.xcdatamodeld */,
 				492916BC197A937C002AB7F8 /* Supporting Files */,
 			);
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492916E9197A93CC002AB7F8 /* MainStoryboard.storyboard in Resources */,
 				492916C0197A937C002AB7F8 /* InfoPlist.strings in Resources */,
 				492916CB197A937C002AB7F8 /* Images.xcassets in Resources */,
 			);
