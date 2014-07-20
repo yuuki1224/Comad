@@ -10,7 +10,7 @@
 
 NSArray * kCMDRelatedProductions;
 NSInteger const kCMDRelatedProductionViewMargin = 8;
-NSInteger const kCMDRelatedProductionViewWidth = 50;
+NSInteger const kCMDRelatedProductionViewWidth  = 50;
 NSInteger const kCMDRelatedProductionViewHeight = 50;
 
 @implementation CMDRelatedProductionView
@@ -35,7 +35,6 @@ NSInteger const kCMDRelatedProductionViewHeight = 50;
 {
     CGFloat sampleImageY = (CGRectGetHeight(self.relatedProductionsScrollView.frame) - kCMDRelatedProductionViewHeight) / 2;
     
-    // Drawing code
     for (int i=0; i < [kCMDRelatedProductions count]; i++) {
         UIImageView *sampleProductionImage = [UIImageView new];
         [sampleProductionImage setImage:[UIImage imageNamed:[kCMDRelatedProductions objectAtIndex:i]]];

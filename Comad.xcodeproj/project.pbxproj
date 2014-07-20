@@ -30,7 +30,7 @@
 		49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */; };
 		4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */; };
 		49291710197BD483002AB7F8 /* CMDProductionCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */; };
-		49291713197BFD3E002AB7F8 /* CMDWantProductionFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291712197BFD3E002AB7F8 /* CMDWantProductionFriendsView.m */; };
+		49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +76,8 @@
 		49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDRelatedProductionView.m; sourceTree = "<group>"; };
 		4929170E197BD483002AB7F8 /* CMDProductionCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDProductionCommentView.h; sourceTree = "<group>"; };
 		4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDProductionCommentView.m; sourceTree = "<group>"; };
-		49291711197BFD3E002AB7F8 /* CMDWantProductionFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDWantProductionFriendsView.h; sourceTree = "<group>"; };
-		49291712197BFD3E002AB7F8 /* CMDWantProductionFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDWantProductionFriendsView.m; sourceTree = "<group>"; };
+		49291711197BFD3E002AB7F8 /* CMDWantProductionPeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDWantProductionPeopleView.h; sourceTree = "<group>"; };
+		49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDWantProductionPeopleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,8 +261,8 @@
 				49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */,
 				4929170E197BD483002AB7F8 /* CMDProductionCommentView.h */,
 				4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */,
-				49291711197BFD3E002AB7F8 /* CMDWantProductionFriendsView.h */,
-				49291712197BFD3E002AB7F8 /* CMDWantProductionFriendsView.m */,
+				49291711197BFD3E002AB7F8 /* CMDWantProductionPeopleView.h */,
+				49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 				492916FE197BBB37002AB7F8 /* CMDProductionPageViewController.m in Sources */,
 				49291710197BD483002AB7F8 /* CMDProductionCommentView.m in Sources */,
 				492916C2197A937C002AB7F8 /* main.m in Sources */,
-				49291713197BFD3E002AB7F8 /* CMDWantProductionFriendsView.m in Sources */,
+				49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,
 				4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */,
@@ -582,6 +582,7 @@
 				492916E4197A937C002AB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		492916E5197A937C002AB7F8 /* Build configuration list for PBXNativeTarget "ComadTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +591,7 @@
 				492916E7197A937C002AB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

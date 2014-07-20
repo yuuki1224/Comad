@@ -7,20 +7,26 @@
 //
 
 #import "CMDProductionPageViewController.h"
+
+// CustomeView
 #import "CMDProductionDescriptionView.h"
 #import "CMDProductionCommentView.h"
 #import "CMDRelatedProductionView.h"
+#import "CMDWantProductionPeopleView.h"
 
 @interface CMDProductionPageViewController ()
 {
     CMDProductionDescriptionView *_productionDescriptionView;
-    CMDProductionCommentView *_commentView;
-    CMDRelatedProductionView *_relatedProductionView;
+    CMDProductionCommentView     *_commentView;
+    CMDRelatedProductionView     *_relatedProductionView;
+    CMDWantProductionPeopleView  *_wantProductionPeopleView;
 }
 
 @end
 
 @implementation CMDProductionPageViewController
+
+#pragma mark - LifeCycle
 
 - (void)awakeFromNib
 {
@@ -34,6 +40,9 @@
     
     UIViewController *relatedProductionVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDRelatedProductionView"];
     _relatedProductionView = (CMDRelatedProductionView *)relatedProductionVC.view;
+    
+    UIViewController *wantProductionPeopleVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDWantProductionPeopleView"];
+    _wantProductionPeopleView = (CMDWantProductionPeopleView *)wantProductionPeopleVC.view;
 }
 
 - (void)viewDidLoad
@@ -50,7 +59,10 @@
     [_relatedProductionView setFrame:CGRectMake(0, 474, 320, 100)];
     [self.contentScrollView addSubview:_relatedProductionView];
     
-    self.contentScrollView.contentSize = CGSizeMake(320, 1000);
+    [_wantProductionPeopleView setFrame:CGRectMake(0, 574, 320, 80)];
+    [self.contentScrollView addSubview:_wantProductionPeopleView];
+    
+    self.contentScrollView.contentSize = CGSizeMake(320, 670);
 }
 
 - (void)didReceiveMemoryWarning

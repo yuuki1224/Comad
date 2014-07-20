@@ -482,6 +482,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="87g-kn-mrH" kind="push" id="MJ9-9g-v7U"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjo-aD-Wwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="uST-do-Khm" customClass="CMDHomeController">
@@ -524,12 +527,12 @@
         <!--View Controller-->
         <scene sceneID="BYd-cT-cdE">
             <objects>
-                <viewController id="14T-bt-b8E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CMDWantProductionPeopleView" id="14T-bt-b8E" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aIp-NJ-svw"/>
                         <viewControllerLayoutGuide type="bottom" id="2AU-ED-whR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="onq-vN-X73">
+                    <view key="view" contentMode="scaleToFill" id="onq-vN-X73" customClass="CMDWantProductionPeopleView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -542,39 +545,12 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT3-Uq-s6T">
                                 <rect key="frame" x="0.0" y="30" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage1" translatesAutoresizingMaskIntoConstraints="NO" id="tsL-AP-EMT">
-                                        <rect key="frame" x="-8" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage2" translatesAutoresizingMaskIntoConstraints="NO" id="i6Z-Pw-RLv">
-                                        <rect key="frame" x="40" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage3" translatesAutoresizingMaskIntoConstraints="NO" id="t6x-47-e19">
-                                        <rect key="frame" x="88" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage4" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-PA-v15">
-                                        <rect key="frame" x="136" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage1" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-mz-g5k">
-                                        <rect key="frame" x="184" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage2" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-bm-pEF">
-                                        <rect key="frame" x="232" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage3" translatesAutoresizingMaskIntoConstraints="NO" id="UFe-1X-Iqn">
-                                        <rect key="frame" x="280" y="5" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="wantProductionPeopleScrollView" destination="UT3-Uq-s6T" id="sJK-rL-cs3"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -600,7 +576,7 @@
                                 <rect key="frame" x="20" y="25" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gda-1z-akM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gda-1z-akM">
                                 <rect key="frame" x="15" y="155" width="300" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -608,7 +584,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL9-A3-wWF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL9-A3-wWF">
                                 <rect key="frame" x="156" y="21" width="153" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1870,30 +1846,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9d-gH-6Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1591" y="-698"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Qs9-sb-3NL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cga-fO-kuY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBv-71-qF5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="87g-kn-mrH" kind="relationship" relationship="rootViewController" id="k6g-gt-8aN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aMT-CI-Rxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-138" y="-698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cla-1e-Apv">
