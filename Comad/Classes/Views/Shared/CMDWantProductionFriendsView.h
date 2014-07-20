@@ -1,5 +1,5 @@
 //
-//  CMDProductionDescriptionView.h
+//  CMDWantProductionFriendsView.h
 //  Comad
 //
 //  Created by AsanoYuki on 2014/07/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMDProductionDescriptionView : UIView
+@interface CMDWantProductionFriendsView : UIView
 
 @end

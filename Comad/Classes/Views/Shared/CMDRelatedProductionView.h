@@ -10,4 +10,7 @@
 
 @interface CMDRelatedProductionView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *relatedProductionLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *relatedProductionsScrollView;
+
 @end

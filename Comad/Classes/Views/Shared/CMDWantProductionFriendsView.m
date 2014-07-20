@@ -1,14 +1,14 @@
 //
-//  CMDProductionDescriptionView.m
+//  CMDWantProductionFriendsView.m
 //  Comad
 //
 //  Created by AsanoYuki on 2014/07/20.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
-#import "CMDProductionDescriptionView.h"
+#import "CMDWantProductionFriendsView.h"
 
-@implementation CMDProductionDescriptionView
+@implementation CMDWantProductionFriendsView
 
 - (id)initWithFrame:(CGRect)frame
 {
