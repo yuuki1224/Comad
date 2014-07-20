@@ -28,6 +28,7 @@
 		492916FE197BBB37002AB7F8 /* CMDProductionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916FD197BBB37002AB7F8 /* CMDProductionPageViewController.m */; };
 		49291701197BBB52002AB7F8 /* CMDSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291700197BBB52002AB7F8 /* CMDSideMenuView.m */; };
 		49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */; };
+		4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		49291700197BBB52002AB7F8 /* CMDSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDSideMenuView.m; sourceTree = "<group>"; };
 		49291703197BC1DD002AB7F8 /* CMDProductionDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMDProductionDescriptionView.h; path = ../../Resources/StoryBoards/CMDProductionDescriptionView.h; sourceTree = "<group>"; };
 		49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMDProductionDescriptionView.m; path = ../../Resources/StoryBoards/CMDProductionDescriptionView.m; sourceTree = "<group>"; };
+		49291708197BC583002AB7F8 /* CMDRelatedProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDRelatedProductionView.h; sourceTree = "<group>"; };
+		49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDRelatedProductionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,8 @@
 		49291706197BC1EE002AB7F8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				49291708197BC583002AB7F8 /* CMDRelatedProductionView.h */,
+				49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				492916C2197A937C002AB7F8 /* main.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,
+				4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */,
 				492916C6197A937C002AB7F8 /* CMDAppDelegate.m in Sources */,
 				49291701197BBB52002AB7F8 /* CMDSideMenuView.m in Sources */,
 				492916F8197AD949002AB7F8 /* CMDHomeController.m in Sources */,
