@@ -29,6 +29,7 @@
 		49291701197BBB52002AB7F8 /* CMDSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291700197BBB52002AB7F8 /* CMDSideMenuView.m */; };
 		49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */; };
 		4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */; };
+		49291710197BD483002AB7F8 /* CMDProductionCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMDProductionDescriptionView.m; path = ../../Resources/StoryBoards/CMDProductionDescriptionView.m; sourceTree = "<group>"; };
 		49291708197BC583002AB7F8 /* CMDRelatedProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDRelatedProductionView.h; sourceTree = "<group>"; };
 		49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDRelatedProductionView.m; sourceTree = "<group>"; };
+		4929170E197BD483002AB7F8 /* CMDProductionCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDProductionCommentView.h; sourceTree = "<group>"; };
+		4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDProductionCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,8 @@
 			children = (
 				49291708197BC583002AB7F8 /* CMDRelatedProductionView.h */,
 				49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */,
+				4929170E197BD483002AB7F8 /* CMDProductionCommentView.h */,
+				4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				492916FE197BBB37002AB7F8 /* CMDProductionPageViewController.m in Sources */,
+				49291710197BD483002AB7F8 /* CMDProductionCommentView.m in Sources */,
 				492916C2197A937C002AB7F8 /* main.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,

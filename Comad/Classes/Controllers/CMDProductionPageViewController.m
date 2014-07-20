@@ -7,26 +7,42 @@
 //
 
 #import "CMDProductionPageViewController.h"
+#import "CMDProductionDescriptionView.h"
+#import "CMDProductionCommentView.h"
 
 @interface CMDProductionPageViewController ()
+{
+    CMDProductionDescriptionView *_productionDescriptionView;
+    CMDProductionCommentView *_commentView;
+}
 
 @end
 
 @implementation CMDProductionPageViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)awakeFromNib
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    UIStoryboard *mainStoryBoard = self.storyboard;
+    
+    UIViewController *productionDescriptionVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDProductionDescriptionView"];
+    _productionDescriptionView = (CMDProductionDescriptionView *)productionDescriptionVC.view;
+    
+    UIViewController *productionCommentVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDProductionCommentView"];
+    _commentView = (CMDProductionCommentView *)productionCommentVC.view;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _productionDescriptionView.frame = CGRectMake(0, 0, 320, 300);
+    [self.contentScrollView addSubview:_productionDescriptionView];
+    
+    _commentView.frame = CGRectMake(0, 300, 320, 172);
+    [self.contentScrollView addSubview:_commentView];
+    
+    self.contentScrollView.contentSize = CGSizeMake(320, 1000);
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +51,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)viewWillAppear:(BOOL)animated
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
 }
-*/
 
 @end
