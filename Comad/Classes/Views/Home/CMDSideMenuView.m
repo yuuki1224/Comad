@@ -118,6 +118,10 @@ NSArray * kMenuSettingsTitles;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
+    {
+        [self.delegate sideMenuTapped:CMDSideMenuCellHome];
+    }
 }
 
 @end

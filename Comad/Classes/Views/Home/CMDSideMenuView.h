@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 
 @interface CMDSideMenuView : UIView <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) id<CMDSideMenuViewDelegate> delegate;
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;

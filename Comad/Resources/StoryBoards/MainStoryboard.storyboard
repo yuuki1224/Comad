@@ -483,7 +483,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="87g-kn-mrH" kind="push" id="MJ9-9g-v7U"/>
+                        <segue destination="87g-kn-mrH" kind="push" identifier="CMDAnimeListSegue" id="MJ9-9g-v7U"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjo-aD-Wwd" userLabel="First Responder" sceneMemberID="firstResponder"/>

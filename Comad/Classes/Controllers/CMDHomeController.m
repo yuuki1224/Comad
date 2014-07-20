@@ -23,6 +23,7 @@
     
     _sideMenu = (CMDSideMenuView *)sideMenuVC.view;
     _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
+    _sideMenu.delegate = self;
     
     _backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
     _backView.backgroundColor = [UIColor blackColor];
@@ -31,14 +32,21 @@
     [_backView addGestureRecognizer:_tapGestureRecognizer];
 }
 
-#pragma mark - UITapGestureRecognizer Action
+#pragma mark - Private
 
-- (void)tapBackView:(UITapGestureRecognizer *)sender
+- (void)p_hideSideBarAndBackView
 {
     [_backView removeFromSuperview];
     [UIView animateWithDuration:0.1 animations:^{
         _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
     }];
+}
+
+#pragma mark - UITapGestureRecognizer Action
+
+- (void)tapBackView:(UITapGestureRecognizer *)sender
+{
+    [self p_hideSideBarAndBackView];
 }
 
 #pragma mark - IBAction
@@ -57,7 +65,10 @@
 
 - (void)sideMenuTapped:(CMDSideMenuCell)cellType
 {
+    [self p_hideSideBarAndBackView];
+    
     // Segue呼び出し
+    [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
 }
 
 @end
