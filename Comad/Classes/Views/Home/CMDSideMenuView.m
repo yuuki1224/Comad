@@ -122,9 +122,20 @@ NSArray * kMenuSettingsTitles;
     {
         switch (indexPath.section)
         {
-            case 0:
-                [self.delegate sideMenuTapped:CMDSideMenuWatchedList];
+            case 0: {
+                switch (indexPath.row) {
+                    case 5:
+                        [self.delegate sideMenuTapped:CMDSideMenuFollow];
+                        break;
+                    case 6:
+                        [self.delegate sideMenuTapped:CMDSideMenuFollower];
+                        break;
+                    default:
+                        [self.delegate sideMenuTapped:CMDSideMenuWatchedList];
+                        break;
+                }
                 break;
+            }
             case 1:
                 [self.delegate sideMenuTapped:CMDSideMenuAnimeList];
                 break;

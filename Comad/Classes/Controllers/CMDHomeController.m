@@ -82,6 +82,12 @@
         case CMDSideMenuWatchedList:
             [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
             break;
+        case CMDSideMenuFollow:
+            [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
+            break;
+        case CMDSideMenuFollower:
+            [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
+            break;
         case CMDSideMenuAnimeList:
             break;
         case CMDSideMenuSettings:
