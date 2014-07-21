@@ -486,6 +486,7 @@
                         <segue destination="87g-kn-mrH" kind="push" identifier="CMDAnimeListSegue" id="MJ9-9g-v7U"/>
                         <segue destination="FnI-U7-2Bq" kind="push" identifier="CMDSettingsSegue" id="cda-IP-7w5"/>
                         <segue destination="rXj-uD-mdi" kind="push" identifier="CMDFollowSegue" id="Sfv-gd-QUk"/>
+                        <segue destination="zuh-ZX-kk4" kind="push" identifier="CMDDramaListSegue" id="7xt-Z7-fIt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjo-aD-Wwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1829,30 +1830,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9d-gH-6Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1591" y="-698"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cla-1e-Apv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="luA-Rs-mL3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XfR-hU-Lde">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zuh-ZX-kk4" kind="relationship" relationship="rootViewController" id="TMA-q1-KCV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BSW-fG-tLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="754" y="-698"/>
         </scene>
         <!--View Controller - あなたのページ-->
         <scene sceneID="QHo-Wm-ljX">

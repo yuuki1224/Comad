@@ -79,8 +79,16 @@
     
     // Segue呼び出し
     switch (cellType) {
+        case CMDSideMenuCellHome:
+            break;
         case CMDSideMenuWatchedList:
             [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
+            break;
+        case CMDSideMenuFavoriteList:
+            break;
+        case CMDSideMenuWantList:
+            break;
+        case CMDSideMenuFriendRelatedList:
             break;
         case CMDSideMenuFollow:
             [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
@@ -88,7 +96,23 @@
         case CMDSideMenuFollower:
             [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
             break;
+        case CMDSideMenuSeachFriend:
+            break;
         case CMDSideMenuAnimeList:
+            break;
+        case CMDSideMenuNotPublicAnimeList:
+            break;
+        case CMDSideMenuMovieList:
+            break;
+        case CMDSideMenuFridayMovieList:
+            break;
+        case CMDSideMenuNotPublicMovieList:
+            break;
+        case CMDSideMenuDramaList:
+            [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
+            break;
+        case CMDSideMenuNotPublicDramaList:
+            [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
             break;
         case CMDSideMenuSettings:
             [self.viewController performSegueWithIdentifier:@"CMDSettingsSegue" sender:self];

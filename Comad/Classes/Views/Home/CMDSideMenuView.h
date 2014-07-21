@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, CMDSideMenuCell)
     CMDSideMenuFriendRelatedList,
     CMDSideMenuFollow,
     CMDSideMenuFollower,
-    CMDSeachFriend,
+    CMDSideMenuSeachFriend,
     
     // Search Section
     CMDSideMenuAnimeList,
