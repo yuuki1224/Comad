@@ -13,6 +13,8 @@ NSInteger const kCMDRelatedProductionViewMargin = 8;
 NSInteger const kCMDRelatedProductionViewWidth  = 50;
 NSInteger const kCMDRelatedProductionViewHeight = 50;
 
+NSInteger const kCMDRelatedProductionViewCount = 20;
+
 @implementation CMDRelatedProductionView
 
 #pragma mark - LifeCycle
@@ -35,9 +37,9 @@ NSInteger const kCMDRelatedProductionViewHeight = 50;
 {
     CGFloat sampleImageY = (CGRectGetHeight(self.relatedProductionsScrollView.frame) - kCMDRelatedProductionViewHeight) / 2;
     
-    for (int i=0; i < [kCMDRelatedProductions count]; i++) {
+    for (int i=0; i < kCMDRelatedProductionViewCount; i++) {
         UIImageView *sampleProductionImage = [UIImageView new];
-        [sampleProductionImage setImage:[UIImage imageNamed:[kCMDRelatedProductions objectAtIndex:i]]];
+        [sampleProductionImage setImage:[UIImage imageNamed:[kCMDRelatedProductions objectAtIndex:i%[kCMDRelatedProductions count]]]];
         [sampleProductionImage setFrame:CGRectMake(
                                                   kCMDRelatedProductionViewMargin * (i + 1) + kCMDRelatedProductionViewWidth * i,
                                                   sampleImageY,
@@ -48,7 +50,7 @@ NSInteger const kCMDRelatedProductionViewHeight = 50;
     }
     
     [self.relatedProductionsScrollView setContentSize:CGSizeMake(
-                                                                 kCMDRelatedProductionViewWidth * 2 + kCMDRelatedProductionViewWidth * [kCMDRelatedProductions count],
+                                                                 kCMDRelatedProductionViewWidth * 2 + kCMDRelatedProductionViewWidth * kCMDRelatedProductionViewCount,
                                                                  CGRectGetHeight(self.relatedProductionsScrollView.frame))];
 }
 

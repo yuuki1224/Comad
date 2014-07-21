@@ -13,7 +13,7 @@ NSInteger const kCMDWantProductionPeopleViewMargin = 8;
 NSInteger const kCMDWantProductionPeopleViewWidth  = 40;
 NSInteger const kCMDWantProductionPeopleViewHeight = 40;
 
-NSInteger const kCMDWantProductionPeopleCount = 10;
+NSInteger const kCMDWantProductionPeopleCount = 60;
 
 @implementation CMDWantProductionPeopleView
 
