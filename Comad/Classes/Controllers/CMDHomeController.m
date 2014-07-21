@@ -10,6 +10,7 @@
 
 @implementation CMDHomeController {
     // Storyboard
+    UIStoryboard *_productionListStoryboard;
     UIStoryboard *_customViewStoryboard;
     UIStoryboard *_settingsStoryboard;
     
@@ -24,6 +25,7 @@
 
 - (void)awakeFromNib
 {
+    _productionListStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardProductionListIdentifier bundle:nil];
     _customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
     _settingsStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardSettingsIdentifier bundle:nil];
     
@@ -89,17 +91,29 @@
         case CMDSideMenuCellHome:
             break;
         case CMDSideMenuWatchedList:
-            [self.viewController performSegueWithIdentifier:@"CMDWatchedListSegue" sender:self];
+        {
+            UIViewController *watchedListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDWatchedListViewController"];
+            [self.viewController.navigationController pushViewController:watchedListViewController animated:YES];
             break;
+        }
         case CMDSideMenuFavoriteList:
-            [self.viewController performSegueWithIdentifier:@"CMDFavoriteListSegue" sender:self];
+        {
+            UIViewController *favoriteListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDFavoriteListViewController"];
+            [self.viewController.navigationController pushViewController:favoriteListViewController animated:YES];
             break;
+        }
         case CMDSideMenuWantList:
-            [self.viewController performSegueWithIdentifier:@"CMDWantListSegue" sender:self];
+        {
+            UIViewController *wantListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDWantListViewController"];
+            [self.viewController.navigationController pushViewController:wantListViewController animated:YES];
             break;
+        }
         case CMDSideMenuFriendRelatedList:
-            [self.viewController performSegueWithIdentifier:@"CMDFriendRelatedListSegue" sender:self];
+        {
+            UIViewController *friendRelatedListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDFriendRelatedListViewController"];
+            [self.viewController.navigationController pushViewController:friendRelatedListViewController animated:YES];
             break;
+        }
         case CMDSideMenuFollow:
             [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
             break;
@@ -109,26 +123,47 @@
         case CMDSideMenuSeachFriend:
             break;
         case CMDSideMenuAnimeList:
-            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
+        {
+            UIViewController *animeListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDAnimeListViewController"];
+            [self.viewController.navigationController pushViewController:animeListViewController animated:YES];
             break;
+        }
         case CMDSideMenuNotPublicAnimeList:
-            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
+        {
+            UIViewController *animeListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDAnimeListViewController"];
+            [self.viewController.navigationController pushViewController:animeListViewController animated:YES];
             break;
+        }
         case CMDSideMenuMovieList:
-            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
+        {
+            UIViewController *movieListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDMovieListViewController"];
+            [self.viewController.navigationController pushViewController:movieListViewController animated:YES];
             break;
+        }
         case CMDSideMenuFridayMovieList:
-            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
+        {
+            UIViewController *movieListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDMovieListViewController"];
+            [self.viewController.navigationController pushViewController:movieListViewController animated:YES];
             break;
+        }
         case CMDSideMenuNotPublicMovieList:
-            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
+        {
+            UIViewController *movieListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDMovieListViewController"];
+            [self.viewController.navigationController pushViewController:movieListViewController animated:YES];
             break;
+        }
         case CMDSideMenuDramaList:
-            [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
+        {
+            UIViewController *dramaListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDDramaListViewController"];
+            [self.viewController.navigationController pushViewController:dramaListViewController animated:YES];
             break;
+        }
         case CMDSideMenuNotPublicDramaList:
-            [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
+        {
+            UIViewController *dramaListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDDramaListViewController"];
+            [self.viewController.navigationController pushViewController:dramaListViewController animated:YES];
             break;
+        }
         case CMDSideMenuSettings:
         {
             UIViewController *settingsViewController = [_settingsStoryboard instantiateViewControllerWithIdentifier:@"CMDSettingsViewController"];
