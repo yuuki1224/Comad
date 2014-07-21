@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMDProductionCommentDelegate <NSObject>
+@optional
+- (void)tappedCommentCell:(UITableViewCell *)cell;
+- (void)tappedOthersComment;
+
+@end
+
 @interface CMDProductionCommentView : UIView <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) id<CMDProductionCommentDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITableView *commentTable;
 

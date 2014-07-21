@@ -90,7 +90,9 @@ NSArray *kCMDProductionCommentCells;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // コメントを表示する
+    if ([self.delegate respondsToSelector:@selector(tappedCommentCell:)]) {
+        [self.delegate tappedCommentCell:[tableView cellForRowAtIndexPath:indexPath]];
+    }
 }
 
 @end
