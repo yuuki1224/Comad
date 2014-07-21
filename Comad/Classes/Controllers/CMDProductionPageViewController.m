@@ -10,7 +10,7 @@
 
 // CustomeView
 #import "CMDProductionDescriptionView.h"
-#import "CMDProductionCommentView.h"
+//#import "CMDProductionCommentView.h"
 #import "CMDRelatedProductionView.h"
 #import "CMDWantProductionPeopleView.h"
 
@@ -37,6 +37,7 @@
     
     UIViewController *productionCommentVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDProductionCommentView"];
     _commentView = (CMDProductionCommentView *)productionCommentVC.view;
+    _commentView.delegate = self;
     
     UIViewController *relatedProductionVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDRelatedProductionView"];
     _relatedProductionView = (CMDRelatedProductionView *)relatedProductionVC.view;
@@ -72,6 +73,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
+#pragma mark - CMDProductionCommentViewDelegate
+
+- (void)tappedCommentCell:(UITableViewCell *)cell
+{
+    [self performSegueWithIdentifier:@"CMDProductionCommentListSegue" sender:self];
+}
+
+- (void)tappedOthersComment
 {
     
 }

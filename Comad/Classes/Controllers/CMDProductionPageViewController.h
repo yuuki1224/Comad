@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMDProductionCommentView.h"
 
-@interface CMDProductionPageViewController : UIViewController
+@interface CMDProductionPageViewController : UIViewController <CMDProductionCommentDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
