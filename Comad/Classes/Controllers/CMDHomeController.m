@@ -9,7 +9,13 @@
 #import "CMDHomeController.h"
 
 @implementation CMDHomeController {
+    // Storyboard
+    UIStoryboard *_customViewStoryboard;
+    UIStoryboard *_settingsStoryboard;
+    
+    // CustomView
     CMDSideMenuView *_sideMenu;
+    
     UIView *_backView;
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
@@ -18,9 +24,10 @@
 
 - (void)awakeFromNib
 {
-    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *sideMenuVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDSideMenuView"];
+    _customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    _settingsStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardSettingsIdentifier bundle:nil];
     
+    UIViewController *sideMenuVC = [_customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDSideMenuView"];
     _sideMenu = (CMDSideMenuView *)sideMenuVC.view;
     _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
     _sideMenu.delegate = self;
@@ -123,8 +130,11 @@
             [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
             break;
         case CMDSideMenuSettings:
-            [self.viewController performSegueWithIdentifier:@"CMDSettingsSegue" sender:self];
+        {
+            UIViewController *settingsViewController = [_settingsStoryboard instantiateViewControllerWithIdentifier:@"CMDSettingsViewController"];
+            [self.viewController.navigationController pushViewController:settingsViewController animated:YES];
             break;
+        }
         default:
             break;
     }
