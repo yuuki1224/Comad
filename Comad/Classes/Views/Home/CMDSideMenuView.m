@@ -47,6 +47,26 @@ NSArray * kMenuSettingsTitles;
                             ];
 }
 
+#pragma mark - Private
+
+- (CMDSideMenuCell)p_cellTypeWithIndexPath:(NSIndexPath *)indexPath
+{
+    CMDSideMenuCell cellType = 0;
+    switch (indexPath.section) {
+        case 0:
+            cellType = indexPath.row;
+            break;
+        case 1:
+            cellType = indexPath.row + [kMenuInfoTitles count];
+            break;
+        case 2:
+            cellType = indexPath.row + [kMenuInfoTitles count] + [kMenuSearchTitles count];
+            break;
+    }
+    
+    return cellType;
+}
+
 #pragma mark - UITableView DateSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -120,40 +140,7 @@ NSArray * kMenuSettingsTitles;
 {
     if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
     {
-        switch (indexPath.section)
-        {
-            case 0: {
-                switch (indexPath.row) {
-                    case 5:
-                        [self.delegate sideMenuTapped:CMDSideMenuFollow];
-                        break;
-                    case 6:
-                        [self.delegate sideMenuTapped:CMDSideMenuFollower];
-                        break;
-                    default:
-                        [self.delegate sideMenuTapped:CMDSideMenuWatchedList];
-                        break;
-                }
-                break;
-            }
-            case 1:
-                [self.delegate sideMenuTapped:CMDSideMenuAnimeList];
-                break;
-            case 2:
-            {
-                switch (indexPath.row)
-                {
-                    case 0:
-                        [self.delegate sideMenuTapped:CMDSideMenuSettings];
-                        break;
-                    case 1: {
-                        [self.delegate sideMenuTapped:CMDSideMenuLogout];
-                        break;
-                    }
-                }
-                break;
-            }
-        }
+        [self.delegate sideMenuTapped:[self p_cellTypeWithIndexPath:indexPath]];
     }
 }
 
