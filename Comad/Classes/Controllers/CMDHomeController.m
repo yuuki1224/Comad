@@ -82,12 +82,16 @@
         case CMDSideMenuCellHome:
             break;
         case CMDSideMenuWatchedList:
+            [self.viewController performSegueWithIdentifier:@"CMDWatchedListSegue" sender:self];
             break;
         case CMDSideMenuFavoriteList:
+            [self.viewController performSegueWithIdentifier:@"CMDFavoriteListSegue" sender:self];
             break;
         case CMDSideMenuWantList:
+            [self.viewController performSegueWithIdentifier:@"CMDWantListSegue" sender:self];
             break;
         case CMDSideMenuFriendRelatedList:
+            [self.viewController performSegueWithIdentifier:@"CMDFriendRelatedListSegue" sender:self];
             break;
         case CMDSideMenuFollow:
             [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
