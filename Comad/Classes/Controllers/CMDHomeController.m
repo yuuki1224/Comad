@@ -68,7 +68,18 @@
     [self p_hideSideBarAndBackView];
     
     // Segue呼び出し
-    [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
+    switch (cellType) {
+        case CMDSideMenuWatchedList:
+            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
+            break;
+        case CMDSideMenuAnimeList:
+            break;
+        case CMDSideMenuSettings:
+            [self.viewController performSegueWithIdentifier:@"CMDSettingsSegue" sender:self];
+            break;
+        default:
+            break;
+    }
 }
 
 @end

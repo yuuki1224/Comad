@@ -10,8 +10,28 @@
 
 typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 {
+    // Basic Section
     CMDSideMenuCellHome = 0,
-    CMDSideMenuCellSettings,
+    CMDSideMenuWatchedList,
+    CMDSideMenuFavoriteList,
+    CMDSideMenuWantList,
+    CMDSideMenuFriendRelatedList,
+    CMDSideMenuFollow,
+    CMDSideMenuFollower,
+    CMDSeachFriend,
+    
+    // Search Section
+    CMDSideMenuAnimeList,
+    CMDSideMenuNotPublicAnimeList,
+    CMDSideMenuMovieList,
+    CMDSideMenuFridayMovieList,
+    CMDSideMenuNotPublicMovieList,
+    CMDSideMenuDramaList,
+    CMDSideMenuNotPublicDramaList,
+    
+    // Other Section
+    CMDSideMenuSettings,
+    CMDSideMenuLogout,
 };
 
 @protocol CMDSideMenuViewDelegate <NSObject>
