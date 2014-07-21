@@ -65,6 +65,16 @@
 
 - (void)sideMenuTapped:(CMDSideMenuCell)cellType
 {
+    if (cellType == CMDSideMenuLogout) {
+        UIActionSheet *logoutActionSheet = [[UIActionSheet alloc] init];
+        [logoutActionSheet addButtonWithTitle:@"ログアウト"];
+        [logoutActionSheet addButtonWithTitle:@"キャンセル"];
+        [logoutActionSheet setCancelButtonIndex:1];
+        
+        [logoutActionSheet showInView:self.viewController.navigationController.view];
+        return;
+    }
+    
     [self p_hideSideBarAndBackView];
     
     // Segue呼び出し

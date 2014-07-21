@@ -120,7 +120,8 @@ NSArray * kMenuSettingsTitles;
 {
     if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
     {
-        switch (indexPath.section) {
+        switch (indexPath.section)
+        {
             case 0:
                 [self.delegate sideMenuTapped:CMDSideMenuWatchedList];
                 break;
@@ -128,8 +129,19 @@ NSArray * kMenuSettingsTitles;
                 [self.delegate sideMenuTapped:CMDSideMenuAnimeList];
                 break;
             case 2:
-                [self.delegate sideMenuTapped:CMDSideMenuSettings];
+            {
+                switch (indexPath.row)
+                {
+                    case 0:
+                        [self.delegate sideMenuTapped:CMDSideMenuSettings];
+                        break;
+                    case 1: {
+                        [self.delegate sideMenuTapped:CMDSideMenuLogout];
+                        break;
+                    }
+                }
                 break;
+            }
         }
     }
 }
