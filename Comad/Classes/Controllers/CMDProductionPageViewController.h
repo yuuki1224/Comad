@@ -11,8 +11,9 @@
 // for Delegate
 #import "CMDProductionCommentView.h"
 #import "CMDWantProductionPeopleView.h"
+#import "CMDRelatedProductionView.h"
 
-@interface CMDProductionPageViewController : UIViewController <CMDProductionCommentViewDelegate, CMDWantProductionPeopleViewDelegate>
+@interface CMDProductionPageViewController : UIViewController <CMDProductionCommentViewDelegate, CMDRelatedProductionViewDelegate, CMDWantProductionPeopleViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 

@@ -11,8 +11,8 @@
 // CustomeView
 #import "CMDProductionDescriptionView.h"
 //#import "CMDProductionCommentView.h"
-#import "CMDRelatedProductionView.h"
-#import "CMDWantProductionPeopleView.h"
+//#import "CMDRelatedProductionView.h"
+//#import "CMDWantProductionPeopleView.h"
 
 @interface CMDProductionPageViewController ()
 {
@@ -41,6 +41,7 @@
     
     UIViewController *relatedProductionVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDRelatedProductionView"];
     _relatedProductionView = (CMDRelatedProductionView *)relatedProductionVC.view;
+    _relatedProductionView.delegate = self;
     
     UIViewController *wantProductionPeopleVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDWantProductionPeopleView"];
     _wantProductionPeopleView = (CMDWantProductionPeopleView *)wantProductionPeopleVC.view;
@@ -88,6 +89,18 @@
 - (void)tappedOthersComment
 {
     
+}
+
+#pragma mark - CMDRelatedProductionViewDelegate
+
+- (void)tappedRelatedProductionImageView
+{
+    // ここでUIViewControllerのpushの循環を作ってみます.
+    NSLog(@"viewControllers: %@", self.navigationController.viewControllers);
+    NSLog(@"count: %d", [self.navigationController.viewControllers count]);
+    
+    UIViewController *relatedProductionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionPageViewController"];
+    [self.navigationController pushViewController:relatedProductionVC animated:YES];
 }
 
 #pragma mark - CMDWantProductionPeopleViewDelegate

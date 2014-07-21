@@ -499,7 +499,7 @@
         <!--Production Page View Controller - ソードアート・オンラインⅡ-->
         <scene sceneID="oM4-3y-4b3">
             <objects>
-                <viewController id="5C6-UR-82f" customClass="CMDProductionPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CMDProductionPageViewController" id="5C6-UR-82f" customClass="CMDProductionPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i2o-jb-tj1"/>
                         <viewControllerLayoutGuide type="bottom" id="dmf-bK-Q2D"/>

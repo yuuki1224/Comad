@@ -61,7 +61,7 @@ NSInteger const kCMDRelatedProductionViewCount = 20;
 
 - (void)tappedProductionImageView:(UIGestureRecognizer *)sender
 {
-    if ([self.delegate respondsToSelector:@selector(tappedProductionImageView:)]) {
+    if ([self.delegate respondsToSelector:@selector(tappedRelatedProductionImageView)]) {
         [self.delegate tappedRelatedProductionImageView];
     }
 }
