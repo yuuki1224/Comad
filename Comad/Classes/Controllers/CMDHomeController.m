@@ -18,8 +18,8 @@
 
 - (void)awakeFromNib
 {
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
-    UIViewController *sideMenuVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDSideMenuView"];
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *sideMenuVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDSideMenuView"];
     
     _sideMenu = (CMDSideMenuView *)sideMenuVC.view;
     _sideMenu.frame = CGRectMake(-280, 0, 280, 568);

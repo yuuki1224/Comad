@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49164278197D632300F5892E /* CustomViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49164277197D632300F5892E /* CustomViewStoryboard.storyboard */; };
 		492916B4197A937C002AB7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492916B3197A937C002AB7F8 /* Foundation.framework */; };
 		492916B6197A937C002AB7F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492916B5197A937C002AB7F8 /* CoreGraphics.framework */; };
 		492916B8197A937C002AB7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492916B7197A937C002AB7F8 /* UIKit.framework */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49164277197D632300F5892E /* CustomViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomViewStoryboard.storyboard; sourceTree = "<group>"; };
 		492916B0197A937C002AB7F8 /* Comad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		492916B3197A937C002AB7F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		492916B5197A937C002AB7F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */,
+				49164277197D632300F5892E /* CustomViewStoryboard.storyboard */,
 			);
 			name = StoryBoards;
 			path = Resources/StoryBoards;
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				492916E9197A93CC002AB7F8 /* MainStoryboard.storyboard in Resources */,
+				49164278197D632300F5892E /* CustomViewStoryboard.storyboard in Resources */,
 				492916C0197A937C002AB7F8 /* InfoPlist.strings in Resources */,
 				492916CB197A937C002AB7F8 /* Images.xcassets in Resources */,
 			);
