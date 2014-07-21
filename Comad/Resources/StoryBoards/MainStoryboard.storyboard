@@ -487,6 +487,7 @@
                         <segue destination="FnI-U7-2Bq" kind="push" identifier="CMDSettingsSegue" id="cda-IP-7w5"/>
                         <segue destination="rXj-uD-mdi" kind="push" identifier="CMDFollowSegue" id="Sfv-gd-QUk"/>
                         <segue destination="zuh-ZX-kk4" kind="push" identifier="CMDDramaListSegue" id="7xt-Z7-fIt"/>
+                        <segue destination="cDu-Dy-kU7" kind="push" identifier="CMDMovieListSegue" id="DOE-ZC-odW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjo-aD-Wwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1807,29 +1808,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4t-iP-krP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="-698"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sgS-mB-CeH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vSL-bh-uCh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yvw-Mf-6tm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cDu-Dy-kU7" kind="relationship" relationship="rootViewController" id="iMo-qv-J5E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w9d-gH-6Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1591" y="-698"/>
         </scene>
         <!--View Controller - あなたのページ-->
         <scene sceneID="QHo-Wm-ljX">

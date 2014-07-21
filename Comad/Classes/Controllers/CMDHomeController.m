@@ -82,7 +82,6 @@
         case CMDSideMenuCellHome:
             break;
         case CMDSideMenuWatchedList:
-            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
             break;
         case CMDSideMenuFavoriteList:
             break;
@@ -99,14 +98,19 @@
         case CMDSideMenuSeachFriend:
             break;
         case CMDSideMenuAnimeList:
+            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
             break;
         case CMDSideMenuNotPublicAnimeList:
+            [self.viewController performSegueWithIdentifier:@"CMDAnimeListSegue" sender:self];
             break;
         case CMDSideMenuMovieList:
+            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
             break;
         case CMDSideMenuFridayMovieList:
+            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
             break;
         case CMDSideMenuNotPublicMovieList:
+            [self.viewController performSegueWithIdentifier:@"CMDMovieListSegue" sender:self];
             break;
         case CMDSideMenuDramaList:
             [self.viewController performSegueWithIdentifier:@"CMDDramaListSegue" sender:self];
