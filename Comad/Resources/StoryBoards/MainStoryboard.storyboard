@@ -520,6 +520,7 @@
                     <connections>
                         <outlet property="contentScrollView" destination="Oa3-dE-w4y" id="QXz-Nd-HJT"/>
                         <segue destination="JAU-GS-oHy" kind="push" identifier="CMDProductionCommentListSegue" id="q9v-Wu-B4y"/>
+                        <segue destination="KCM-Cg-rPA" kind="push" identifier="CMDUserPageSegue" id="Rjq-ww-A0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK6-RC-fMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1872,7 +1873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyt-Bg-gA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="-692"/>
+            <point key="canvasLocation" x="2448" y="-698"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0dc-Re-9JT">
@@ -2228,30 +2229,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pf7-sS-mDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="302" y="930"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yC0-FO-pui">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nBR-7A-Yn5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VN8-fV-x1C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.29803921570000003" green="0.54117647059999996" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KCM-Cg-rPA" kind="relationship" relationship="rootViewController" id="5op-0q-76Q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfN-Yf-SZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2443" y="-692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m33-iI-Rwu">

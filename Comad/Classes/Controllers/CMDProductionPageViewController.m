@@ -44,6 +44,7 @@
     
     UIViewController *wantProductionPeopleVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CMDWantProductionPeopleView"];
     _wantProductionPeopleView = (CMDWantProductionPeopleView *)wantProductionPeopleVC.view;
+    _wantProductionPeopleView.delegate = self;
 }
 
 - (void)viewDidLoad
@@ -87,6 +88,13 @@
 - (void)tappedOthersComment
 {
     
+}
+
+#pragma mark - CMDWantProductionPeopleViewDelegate
+
+- (void)tappedPerson
+{
+    [self performSegueWithIdentifier:@"CMDUserPageSegue" sender:self];
 }
 
 @end

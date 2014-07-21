@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CMDWantProductionPeopleDelegate <NSObject>
+@protocol CMDWantProductionPeopleViewDelegate <NSObject>
 
 - (void)tappedPerson;
 
@@ -16,7 +16,7 @@
 
 @interface CMDWantProductionPeopleView : UIView
 
-@property (weak, nonatomic) id<CMDWantProductionPeopleDelegate> delegate;
+@property (weak, nonatomic) id<CMDWantProductionPeopleViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *wantProductionPeopleScrollView;
 
