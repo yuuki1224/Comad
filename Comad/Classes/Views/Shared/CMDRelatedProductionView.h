@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMDRelatedProductionViewDelegate <NSObject>
+
+- (void)tappedRelatedProductionImageView;
+
+@end
+
 @interface CMDRelatedProductionView : UIView
+
+@property (weak, nonatomic) id<CMDRelatedProductionViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *relatedProductionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *relatedProductionsScrollView;

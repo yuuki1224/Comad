@@ -44,12 +44,26 @@ NSInteger const kCMDRelatedProductionViewCount = 20;
                                                   kCMDRelatedProductionViewWidth,
                                                   kCMDRelatedProductionViewHeight
                                                   )];
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedProductionImageView:)];
+        [sampleProductionImage setUserInteractionEnabled:YES];
+        [sampleProductionImage addGestureRecognizer:tapGestureRecognizer];
+        
         [self.relatedProductionsScrollView addSubview:sampleProductionImage];
     }
     
     [self.relatedProductionsScrollView setContentSize:CGSizeMake(
                                                                  kCMDRelatedProductionViewWidth * 2 + kCMDRelatedProductionViewWidth * kCMDRelatedProductionViewCount,
                                                                  CGRectGetHeight(self.relatedProductionsScrollView.frame))];
+}
+
+#pragma mark - UITapGestureRecognizer
+
+- (void)tappedProductionImageView:(UIGestureRecognizer *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(tappedProductionImageView:)]) {
+        [self.delegate tappedRelatedProductionImageView];
+    }
 }
 
 @end
