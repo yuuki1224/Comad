@@ -16,6 +16,8 @@ NSInteger const kCMDWantProductionPeopleViewHeight = 40;
 NSInteger const kCMDWantProductionPeopleCount = 60;
 
 @implementation CMDWantProductionPeopleView
+{
+}
 
 #pragma mark - LifeCycle
 
@@ -44,6 +46,12 @@ NSInteger const kCMDWantProductionPeopleCount = 60;
                                              40,
                                              40
                                              )];
+        
+        [personImageView setUserInteractionEnabled:YES];
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedProfileImage:)];
+        [personImageView addGestureRecognizer:tapGestureRecognizer];
+        
         [self.wantProductionPeopleScrollView addSubview:personImageView];
     }
     
@@ -51,6 +59,15 @@ NSInteger const kCMDWantProductionPeopleCount = 60;
                                                                   (kCMDWantProductionPeopleViewWidth + kCMDWantProductionPeopleViewMargin) * kCMDWantProductionPeopleCount + kCMDWantProductionPeopleViewMargin,
                                                                   CGRectGetHeight(self.wantProductionPeopleScrollView.frame)
                                                                    )];
+}
+
+#pragma mark - UIGestureRecognizer
+
+- (void)tappedProfileImage:(UIGestureRecognizer *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(tappedProfileImage:)]) {
+        [self.delegate tappedPerson];
+    }
 }
 
 @end
