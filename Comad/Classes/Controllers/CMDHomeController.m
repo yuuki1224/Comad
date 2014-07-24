@@ -10,6 +10,7 @@
 
 @implementation CMDHomeController {
     // Storyboard
+    UIStoryboard *_mainStoryboard;
     UIStoryboard *_productionListStoryboard;
     UIStoryboard *_customViewStoryboard;
     UIStoryboard *_settingsStoryboard;
@@ -25,6 +26,7 @@
 
 - (void)awakeFromNib
 {
+    _mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
     _productionListStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardProductionListIdentifier bundle:nil];
     _customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
     _settingsStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardSettingsIdentifier bundle:nil];
@@ -76,6 +78,7 @@
 {
     if (cellType == CMDSideMenuLogout) {
         UIActionSheet *logoutActionSheet = [[UIActionSheet alloc] init];
+        logoutActionSheet.delegate = self;
         [logoutActionSheet addButtonWithTitle:@"ログアウト"];
         [logoutActionSheet addButtonWithTitle:@"キャンセル"];
         [logoutActionSheet setCancelButtonIndex:1];
@@ -172,6 +175,21 @@
         }
         default:
             break;
+    }
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        // ログアウト処理
+        [self p_hideSideBarAndBackView];
+        
+        // rootViewControllerをCMDInitialViewControllerをイニシャライズしてセット
+        UIViewController *initialViewController = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CMDInitialViewController"];
+        UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+        window.rootViewController = initialViewController;
     }
 }
 

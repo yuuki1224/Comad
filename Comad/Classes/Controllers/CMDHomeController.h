@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CMDSideMenuView.h"
 
-@interface CMDHomeController : NSObject <CMDSideMenuViewDelegate>
+@interface CMDHomeController : NSObject <CMDSideMenuViewDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableViewController *viewController;
 
