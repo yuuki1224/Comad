@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
 
     #import "../Classes/CMDConstants.m"
+    #import "ReactiveCocoa.h"
 #endif
