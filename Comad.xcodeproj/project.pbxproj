@@ -38,6 +38,8 @@
 		4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */; };
 		49291710197BD483002AB7F8 /* CMDProductionCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */; };
 		49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */; };
+		49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AB71990E5BA00580F4E /* _CMDUser.m */; };
+		49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ABA1990E5C400580F4E /* CMDUser.m */; };
 		AFF743CF4CAB48D1AF16FCD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 518F043140AA45EBA49B1253 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,10 @@
 		4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDProductionCommentView.m; sourceTree = "<group>"; };
 		49291711197BFD3E002AB7F8 /* CMDWantProductionPeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDWantProductionPeopleView.h; sourceTree = "<group>"; };
 		49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDWantProductionPeopleView.m; sourceTree = "<group>"; };
+		49E84AB61990E5BA00580F4E /* _CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CMDUser.h; sourceTree = "<group>"; };
+		49E84AB71990E5BA00580F4E /* _CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CMDUser.m; sourceTree = "<group>"; };
+		49E84AB91990E5C400580F4E /* CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUser.h; sourceTree = "<group>"; };
+		49E84ABA1990E5C400580F4E /* CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUser.m; sourceTree = "<group>"; };
 		518F043140AA45EBA49B1253 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8514064D06C04A908D1B8D5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,7 +272,7 @@
 		492916F1197AD3A8002AB7F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				492916C7197A937C002AB7F8 /* Comad.xcdatamodeld */,
+				49E84AB31990E42200580F4E /* CoreData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +331,34 @@
 			children = (
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		49E84AB31990E42200580F4E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				492916C7197A937C002AB7F8 /* Comad.xcdatamodeld */,
+				49E84AB51990E57B00580F4E /* Machines */,
+				49E84AB41990E57400580F4E /* Humans */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		49E84AB41990E57400580F4E /* Humans */ = {
+			isa = PBXGroup;
+			children = (
+				49E84AB91990E5C400580F4E /* CMDUser.h */,
+				49E84ABA1990E5C400580F4E /* CMDUser.m */,
+			);
+			path = Humans;
+			sourceTree = "<group>";
+		};
+		49E84AB51990E57B00580F4E /* Machines */ = {
+			isa = PBXGroup;
+			children = (
+				49E84AB61990E5BA00580F4E /* _CMDUser.h */,
+				49E84AB71990E5BA00580F4E /* _CMDUser.m */,
+			);
+			path = Machines;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,7 +503,9 @@
 				49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */,
 				49061A7119813FA100DFC8B4 /* CMDUserViewController.m in Sources */,
 				49061A7B198142CD00DFC8B4 /* CMDLikeProductionView.m in Sources */,
+				49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
+				49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */,
 				49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,
 				4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */,
