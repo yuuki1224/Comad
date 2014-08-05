@@ -17,4 +17,5 @@
 
     #import "../Classes/CMDConstants.m"
     #import "ReactiveCocoa.h"
+    #import "MagicalRecord.h"
 #endif
