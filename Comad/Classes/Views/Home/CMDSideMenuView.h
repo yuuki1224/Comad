@@ -10,8 +10,11 @@
 
 typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 {
+    // User Image
+    CMDSideMenuUserPage = 0,
+    
     // Basic Section
-    CMDSideMenuCellHome = 0,
+    CMDSideMenuCellHome,
     CMDSideMenuWatchedList,
     CMDSideMenuFavoriteList,
     CMDSideMenuWantList,
@@ -48,5 +51,7 @@ typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 @property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UITableView *sideMenuTabel;
+
+- (IBAction)tappedUserImage:(id)sender;
 
 @end

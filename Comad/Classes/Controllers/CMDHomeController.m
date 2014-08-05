@@ -91,6 +91,11 @@
     
     // Segue呼び出し
     switch (cellType) {
+        case CMDSideMenuUserPage:
+        {
+            [self.viewController performSegueWithIdentifier:kCMDStoryBoardSegueUserIdentifier sender:self];
+            break;
+        }
         case CMDSideMenuCellHome:
             break;
         case CMDSideMenuWatchedList:

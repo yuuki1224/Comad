@@ -54,17 +54,26 @@ NSArray * kMenuSettingsTitles;
     CMDSideMenuCell cellType = 0;
     switch (indexPath.section) {
         case 0:
-            cellType = indexPath.row;
+            cellType = indexPath.row + 1;
             break;
         case 1:
-            cellType = indexPath.row + [kMenuInfoTitles count];
+            cellType = indexPath.row + [kMenuInfoTitles count] + 1;
             break;
         case 2:
-            cellType = indexPath.row + [kMenuInfoTitles count] + [kMenuSearchTitles count];
+            cellType = indexPath.row + [kMenuInfoTitles count] + [kMenuSearchTitles count] + 1;
             break;
     }
     
     return cellType;
+}
+
+#pragma mark - IBAction
+
+- (void)tappedUserImage:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)]) {
+        [self.delegate sideMenuTapped:CMDSideMenuUserPage];
+    }
 }
 
 #pragma mark - UITableView DateSource
