@@ -1,23 +1,23 @@
 //
-//  CMDWatchedProductionView.m
+//  CMDLikeProductionView.m
 //  Comad
 //
 //  Created by AsanoYuki on 2014/07/24.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
-#import "CMDWatchedProductionView.h"
+#import "CMDLikeProductionView.h"
 
-@implementation CMDWatchedProductionView
+@implementation CMDLikeProductionView
 
 #pragma mark - Class method
 
-+ (instancetype)watchedProductionView
++ (instancetype)likeProductionView
 {
     UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *watchedProductionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDWatchedProductionView class])];
+    UIViewController *likeProductionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDLikeProductionView class])];
     
-    return (CMDWatchedProductionView *)watchedProductionViewVC.view;
+    return (CMDLikeProductionView *)likeProductionViewVC.view;
 }
 
 #pragma mark - LifeCycle
@@ -60,7 +60,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"今までに見た作品";
+    return @"好きな作品";
 }
 
 #pragma mark - UITableView Delegate
@@ -82,8 +82,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.delegate respondsToSelector:@selector(tappedProductionCell:)]) {
-        [self.delegate tappedProductionCell:[tableView cellForRowAtIndexPath:indexPath]];
+    switch (indexPath.row) {
+        case 0:
+        case 1:
+        {
+            if ([self.delegate respondsToSelector:@selector(tappedLikeProductionCell:)]) {
+                [self.delegate tappedLikeProductionCell:[tableView cellForRowAtIndexPath:indexPath]];
+            }
+            break;
+        }
+        case 2:
+        {
+            if ([self.delegate respondsToSelector:@selector(tappedOthersLikeProduction)]) {
+                [self.delegate tappedOthersLikeProduction];
+            }
+            break;
+        }
+        default:
+            break;
     }
 }
 

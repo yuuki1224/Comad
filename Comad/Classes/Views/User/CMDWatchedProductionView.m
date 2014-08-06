@@ -1,23 +1,23 @@
 //
-//  CMDLikeProductionView.m
+//  CMDWatchedProductionView.m
 //  Comad
 //
 //  Created by AsanoYuki on 2014/07/24.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
-#import "CMDLikeProductionView.h"
+#import "CMDWatchedProductionView.h"
 
-@implementation CMDLikeProductionView
+@implementation CMDWatchedProductionView
 
 #pragma mark - Class method
 
-+ (instancetype)likeProductionView
++ (instancetype)watchedProductionView
 {
     UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *likeProductionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDLikeProductionView class])];
+    UIViewController *watchedProductionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDWatchedProductionView class])];
     
-    return (CMDLikeProductionView *)likeProductionViewVC.view;
+    return (CMDWatchedProductionView *)watchedProductionViewVC.view;
 }
 
 #pragma mark - LifeCycle
@@ -60,7 +60,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"好きな作品";
+    return @"今までに見た作品";
 }
 
 #pragma mark - UITableView Delegate
@@ -82,9 +82,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     if ([self.delegate respondsToSelector:@selector(tappedLikeProductionCell:)]) {
-         [self.delegate tappedLikeProductionCell:[tableView cellForRowAtIndexPath:indexPath]];
-     }
+    switch (indexPath.row) {
+        case 0:
+        case 1:
+        {
+            if ([self.delegate respondsToSelector:@selector(tappedProductionCell:)]) {
+                [self.delegate tappedProductionCell:[tableView cellForRowAtIndexPath:indexPath]];
+            }
+            break;
+        }
+        case 2:
+        {
+            if ([self.delegate respondsToSelector:@selector(tappedOthersWatchedProduction)]) {
+                [self.delegate tappedOthersWatchedProduction];
+            }
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 @end
