@@ -129,7 +129,10 @@
             [self.viewController performSegueWithIdentifier:@"CMDFollowSegue" sender:self];
             break;
         case CMDSideMenuSeachFriend:
+        {
+            [self.viewController performSegueWithIdentifier:kCMDStoryBoardSegueSearchFriendIdentifier sender:self];
             break;
+        }
         case CMDSideMenuAnimeList:
         {
             UIViewController *animeListViewController = [_productionListStoryboard instantiateViewControllerWithIdentifier:@"CMDAnimeListViewController"];

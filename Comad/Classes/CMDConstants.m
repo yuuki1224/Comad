@@ -21,6 +21,8 @@ static NSString * const kCMDStoryBoardCustomViewIdentifier     = @"CustomViewSto
 
 
 // Segue
-static NSString * const kCMDStoryBoardSegueUserIdentifier = @"CMDUserSegue";
+static NSString * const kCMDStoryBoardSegueUserIdentifier         = @"CMDUserSegue";
+static NSString * const kCMDStoryBoardSegueSearchFriendIdentifier = @"CMDSearchFriendSegue";
+static NSString * const kCMDStoryBoardSegueProductionCommentIdentifier = @"CMDProductionCommentSegue";
 
 #endif
