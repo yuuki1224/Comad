@@ -554,10 +554,10 @@
             </objects>
             <point key="canvasLocation" x="246" y="50"/>
         </scene>
-        <!--User View Controller - あなたのページ-->
+        <!--User Page View Controller - あなたのページ-->
         <scene sceneID="Kzv-QG-TOd">
             <objects>
-                <viewController id="7vi-lp-Cjh" customClass="CMDUserViewController" sceneMemberID="viewController">
+                <viewController id="7vi-lp-Cjh" customClass="CMDUserPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T3f-pS-GZC"/>
                         <viewControllerLayoutGuide type="bottom" id="C8I-8m-dvu"/>
@@ -565,13 +565,22 @@
                     <view key="view" contentMode="scaleToFill" id="piR-dU-Ce5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D2y-IC-YP2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="あなたのページ" id="89U-fK-7oy"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="D2y-IC-YP2" id="BbE-RL-wXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCO-SE-1FW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="-721"/>
+            <point key="canvasLocation" x="1049" y="-710"/>
         </scene>
         <!--View Controller - あなたのページ-->
         <scene sceneID="QHo-Wm-ljX">

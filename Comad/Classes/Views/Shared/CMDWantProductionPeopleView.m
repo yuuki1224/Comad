@@ -22,7 +22,7 @@ NSInteger const kCMDWantProductionPeopleCount = 60;
 + (instancetype)wantProductionPeopleView
 {
     UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *wantProductionPeopleViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    UIViewController *wantProductionPeopleViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDWantProductionPeopleView class])];
     
     return (CMDWantProductionPeopleView *)wantProductionPeopleViewVC.view;
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49061A7119813FA100DFC8B4 /* CMDUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49061A7019813FA100DFC8B4 /* CMDUserViewController.m */; };
 		49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49061A741981412400DFC8B4 /* CMDWantProductionView.m */; };
 		49061A78198142C000DFC8B4 /* CMDWatchedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49061A77198142C000DFC8B4 /* CMDWatchedProductionView.m */; };
 		49061A7B198142CD00DFC8B4 /* CMDLikeProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49061A7A198142CD00DFC8B4 /* CMDLikeProductionView.m */; };
@@ -40,6 +39,10 @@
 		49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */; };
 		49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AB71990E5BA00580F4E /* _CMDUser.m */; };
 		49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ABA1990E5C400580F4E /* CMDUser.m */; };
+		49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC01992200300580F4E /* CMDUserViewModel.m */; };
+		49E84AC419922CD400580F4E /* CMDUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC319922CD400580F4E /* CMDUserHeaderView.m */; };
+		49E84AC719922E8400580F4E /* CMDUserPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC619922E8400580F4E /* CMDUserPageViewController.m */; };
+		49E84ACA19922E9E00580F4E /* CMDUserPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC919922E9E00580F4E /* CMDUserPageViewModel.m */; };
 		AFF743CF4CAB48D1AF16FCD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 518F043140AA45EBA49B1253 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		49061A6F19813FA100DFC8B4 /* CMDUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUserViewController.h; sourceTree = "<group>"; };
-		49061A7019813FA100DFC8B4 /* CMDUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUserViewController.m; sourceTree = "<group>"; };
 		49061A731981412400DFC8B4 /* CMDWantProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDWantProductionView.h; sourceTree = "<group>"; };
 		49061A741981412400DFC8B4 /* CMDWantProductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDWantProductionView.m; sourceTree = "<group>"; };
 		49061A76198142C000DFC8B4 /* CMDWatchedProductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDWatchedProductionView.h; sourceTree = "<group>"; };
@@ -103,6 +104,14 @@
 		49E84AB71990E5BA00580F4E /* _CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CMDUser.m; sourceTree = "<group>"; };
 		49E84AB91990E5C400580F4E /* CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUser.h; sourceTree = "<group>"; };
 		49E84ABA1990E5C400580F4E /* CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUser.m; sourceTree = "<group>"; };
+		49E84ABF1992200300580F4E /* CMDUserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUserViewModel.h; sourceTree = "<group>"; };
+		49E84AC01992200300580F4E /* CMDUserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUserViewModel.m; sourceTree = "<group>"; };
+		49E84AC219922CD400580F4E /* CMDUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUserHeaderView.h; sourceTree = "<group>"; };
+		49E84AC319922CD400580F4E /* CMDUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUserHeaderView.m; sourceTree = "<group>"; };
+		49E84AC519922E8400580F4E /* CMDUserPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUserPageViewController.h; sourceTree = "<group>"; };
+		49E84AC619922E8400580F4E /* CMDUserPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUserPageViewController.m; sourceTree = "<group>"; };
+		49E84AC819922E9E00580F4E /* CMDUserPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUserPageViewModel.h; sourceTree = "<group>"; };
+		49E84AC919922E9E00580F4E /* CMDUserPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDUserPageViewModel.m; sourceTree = "<group>"; };
 		518F043140AA45EBA49B1253 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8514064D06C04A908D1B8D5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,12 +146,14 @@
 		49061A721981410700DFC8B4 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				49061A731981412400DFC8B4 /* CMDWantProductionView.h */,
-				49061A741981412400DFC8B4 /* CMDWantProductionView.m */,
+				49E84AC219922CD400580F4E /* CMDUserHeaderView.h */,
+				49E84AC319922CD400580F4E /* CMDUserHeaderView.m */,
 				49061A76198142C000DFC8B4 /* CMDWatchedProductionView.h */,
 				49061A77198142C000DFC8B4 /* CMDWatchedProductionView.m */,
 				49061A79198142CD00DFC8B4 /* CMDLikeProductionView.h */,
 				49061A7A198142CD00DFC8B4 /* CMDLikeProductionView.m */,
+				49061A731981412400DFC8B4 /* CMDWantProductionView.h */,
+				49061A741981412400DFC8B4 /* CMDWantProductionView.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -251,8 +262,8 @@
 				492916F7197AD949002AB7F8 /* CMDHomeController.m */,
 				492916FC197BBB37002AB7F8 /* CMDProductionPageViewController.h */,
 				492916FD197BBB37002AB7F8 /* CMDProductionPageViewController.m */,
-				49061A6F19813FA100DFC8B4 /* CMDUserViewController.h */,
-				49061A7019813FA100DFC8B4 /* CMDUserViewController.m */,
+				49E84AC519922E8400580F4E /* CMDUserPageViewController.h */,
+				49E84AC619922E8400580F4E /* CMDUserPageViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +340,10 @@
 		49E84AB21990DAA000580F4E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				49E84AC819922E9E00580F4E /* CMDUserPageViewModel.h */,
+				49E84AC919922E9E00580F4E /* CMDUserPageViewModel.m */,
+				49E84ABF1992200300580F4E /* CMDUserViewModel.h */,
+				49E84AC01992200300580F4E /* CMDUserViewModel.m */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -501,15 +516,18 @@
 				492916C2197A937C002AB7F8 /* main.m in Sources */,
 				49061A78198142C000DFC8B4 /* CMDWatchedProductionView.m in Sources */,
 				49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */,
-				49061A7119813FA100DFC8B4 /* CMDUserViewController.m in Sources */,
 				49061A7B198142CD00DFC8B4 /* CMDLikeProductionView.m in Sources */,
 				49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */,
 				49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */,
+				49E84ACA19922E9E00580F4E /* CMDUserPageViewModel.m in Sources */,
+				49E84AC419922CD400580F4E /* CMDUserHeaderView.m in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,
+				49E84AC719922E8400580F4E /* CMDUserPageViewController.m in Sources */,
 				4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */,
 				492916C6197A937C002AB7F8 /* CMDAppDelegate.m in Sources */,
+				49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */,
 				49291701197BBB52002AB7F8 /* CMDSideMenuView.m in Sources */,
 				492916F8197AD949002AB7F8 /* CMDHomeController.m in Sources */,
 				492916F5197AD760002AB7F8 /* CMDConstants.m in Sources */,
