@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UITableView *sideMenuTabel;
 
++ (instancetype)sideMenuView;
 - (IBAction)tappedUserImage:(id)sender;
 
 @end

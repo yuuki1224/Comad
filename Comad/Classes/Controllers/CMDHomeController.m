@@ -26,13 +26,13 @@
 
 - (void)awakeFromNib
 {
+    // storyboardインスタンス化
     _mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
     _productionListStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardProductionListIdentifier bundle:nil];
     _customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
     _settingsStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardSettingsIdentifier bundle:nil];
     
-    UIViewController *sideMenuVC = [_customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDSideMenuView"];
-    _sideMenu = (CMDSideMenuView *)sideMenuVC.view;
+    _sideMenu = [CMDSideMenuView sideMenuView];
     _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
     _sideMenu.delegate = self;
     

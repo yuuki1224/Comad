@@ -18,6 +18,16 @@ NSArray * kMenuSettingsTitles;
 
 @implementation CMDSideMenuView
 
+#pragma mark - Class method
+
++ (instancetype)sideMenuView
+{
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *sideMenuViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    
+    return (CMDSideMenuView *)sideMenuViewVC.view;
+}
+
 #pragma mark - LifeCycle
 
 - (void)awakeFromNib
