@@ -21,4 +21,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *commentTable;
 
++ (instancetype)productionCommentView;
+
 @end

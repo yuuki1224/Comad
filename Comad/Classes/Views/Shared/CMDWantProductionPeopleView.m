@@ -16,7 +16,15 @@ NSInteger const kCMDWantProductionPeopleViewHeight = 40;
 NSInteger const kCMDWantProductionPeopleCount = 60;
 
 @implementation CMDWantProductionPeopleView
+
+#pragma mark - Class method
+
++ (instancetype)wantProductionPeopleView
 {
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *wantProductionPeopleViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    
+    return (CMDWantProductionPeopleView *)wantProductionPeopleViewVC.view;
 }
 
 #pragma mark - LifeCycle

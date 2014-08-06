@@ -10,6 +10,16 @@
 
 @implementation CMDProductionDescriptionView
 
+#pragma mark - Class method
+
++ (instancetype)productionDescriptionView
+{
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *productionDescriptionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    
+    return (CMDProductionDescriptionView *)productionDescriptionViewVC.view;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *productionImageView;
 
++ (instancetype)productionDescriptionView;
+
 @end

@@ -20,4 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *wantProductionPeopleScrollView;
 
++ (instancetype)wantProductionPeopleView;
+
 @end

@@ -21,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *relatedProductionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *relatedProductionsScrollView;
 
++ (instancetype)relatedProductionView;
+
 @end

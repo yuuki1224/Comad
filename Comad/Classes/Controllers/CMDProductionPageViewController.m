@@ -30,21 +30,15 @@
 
 - (void)awakeFromNib
 {
-    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    _productionDescriptionView = [CMDProductionDescriptionView productionDescriptionView];
     
-    UIViewController *productionDescriptionVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDProductionDescriptionView"];
-    _productionDescriptionView = (CMDProductionDescriptionView *)productionDescriptionVC.view;
-    
-    UIViewController *productionCommentVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDProductionCommentView"];
-    _commentView = (CMDProductionCommentView *)productionCommentVC.view;
+    _commentView = [CMDProductionCommentView productionCommentView];
     _commentView.delegate = self;
     
-    UIViewController *relatedProductionVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDRelatedProductionView"];
-    _relatedProductionView = (CMDRelatedProductionView *)relatedProductionVC.view;
+    _relatedProductionView = [CMDRelatedProductionView relatedProductionView];
     _relatedProductionView.delegate = self;
     
-    UIViewController *wantProductionPeopleVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDWantProductionPeopleView"];
-    _wantProductionPeopleView = (CMDWantProductionPeopleView *)wantProductionPeopleVC.view;
+    _wantProductionPeopleView = [CMDWantProductionPeopleView wantProductionPeopleView];
     _wantProductionPeopleView.delegate = self;
 }
 

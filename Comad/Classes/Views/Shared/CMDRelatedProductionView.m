@@ -17,6 +17,16 @@ NSInteger const kCMDRelatedProductionViewCount = 20;
 
 @implementation CMDRelatedProductionView
 
+#pragma mark - Class method
+
++ (instancetype)relatedProductionView
+{
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *relatedProductionViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    
+    return (CMDRelatedProductionView *)relatedProductionViewVC.view;
+}
+
 #pragma mark - LifeCycle
 
 - (void)awakeFromNib

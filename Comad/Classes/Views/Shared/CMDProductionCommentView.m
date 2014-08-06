@@ -12,6 +12,16 @@ NSArray *kCMDProductionCommentCells;
 
 @implementation CMDProductionCommentView
 
+#pragma mark - Class method
+
++ (instancetype)productionCommentView
+{
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *productionCommentViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    
+    return (CMDProductionCommentView *)productionCommentViewVC.view;
+}
+
 #pragma mark - LifeCycle
 
 - (void)awakeFromNib
