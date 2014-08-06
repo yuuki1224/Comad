@@ -82,11 +82,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    if ([self.delegate respondsToSelector:@selector(tappedCommentCell:)]) {
-        [self.delegate tappedCommentCell:[tableView cellForRowAtIndexPath:indexPath]];
+    if ([self.delegate respondsToSelector:@selector(tappedProductionCell:)]) {
+        [self.delegate tappedProductionCell:[tableView cellForRowAtIndexPath:indexPath]];
     }
-     */
 }
 
 @end

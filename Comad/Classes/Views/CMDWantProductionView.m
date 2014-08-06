@@ -75,11 +75,9 @@ NSInteger const kCMDWantProductionCount = 20;
 
 - (void)tappedProfileImage:(UIGestureRecognizer *)sender
 {
-    /*
-    if ([self.delegate respondsToSelector:@selector(tappedPerson)]) {
-        [self.delegate tappedPerson];
+    if ([self.delegate respondsToSelector:@selector(tappedWantProductionImageView)]) {
+        [self.delegate tappedWantProductionImageView];
     }
-     */
 }
 
 @end

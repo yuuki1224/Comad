@@ -17,4 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
++ (instancetype)productionPageViewController;
+
 @end

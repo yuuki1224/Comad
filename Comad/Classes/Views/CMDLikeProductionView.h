@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMDLikeProductionViewDelegate <NSObject>
+@optional
+- (void)tappedLikeProductionCell:(UITableViewCell *)cell;
+- (void)tappedOthersLikeProduction;
+
+@end
+
 @interface CMDLikeProductionView : UIView <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) NSArray *likeProductions;
 @property (weak, nonatomic) IBOutlet UITableView *likeProductionTable;
+
+@property (nonatomic, weak) id<CMDLikeProductionViewDelegate> delegate;
 
 + (instancetype)likeProductionView;
 

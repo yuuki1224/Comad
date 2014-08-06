@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMDWatchedProductionView.h"
+#import "CMDLikeProductionView.h"
+#import "CMDWantProductionView.h"
 
 @class CMDUserPageViewModel;
 
-@interface CMDUserPageViewController : UIViewController
+@interface CMDUserPageViewController : UIViewController <CMDWatchedProductionViewDelegate, CMDLikeProductionViewDelegate, CMDWantProductionViewDelegate>
 
 @property (nonatomic)CMDUserPageViewModel *userPageViewModel;
 

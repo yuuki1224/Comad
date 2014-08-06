@@ -26,6 +26,14 @@
 
 @implementation CMDProductionPageViewController
 
+#pragma mark - Class method
+
++ (instancetype)productionPageViewController
+{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
+    return [mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDProductionPageViewController class])];
+}
+
 #pragma mark - LifeCycle
 
 - (void)awakeFromNib

@@ -14,9 +14,9 @@
 
 // CustomView
 #import "CMDUserHeaderView.h"
-#import "CMDWatchedProductionView.h"
-#import "CMDLikeProductionView.h"
-#import "CMDWantProductionView.h"
+
+// ViewController
+#import "CMDProductionPageViewController.h"
 
 @interface CMDUserPageViewController ()
 {
@@ -50,14 +50,17 @@
     [self.contentScrollView addSubview:_userHeaderView];
     
     _watchedProductionView = [CMDWatchedProductionView watchedProductionView];
+    _watchedProductionView.delegate = self;
     _watchedProductionView.frame = CGRectMake(0, 130, 320, 173);
     [self.contentScrollView addSubview:_watchedProductionView];
     
     _likeProductionView = [CMDLikeProductionView likeProductionView];
+    _likeProductionView.delegate = self;
     _likeProductionView.frame = CGRectMake(0, 303, 320, 173);
     [self.contentScrollView addSubview:_likeProductionView];
     
     _wantProductionView = [CMDWantProductionView wantProductionView];
+    _wantProductionView.delegate = self;
     _wantProductionView.frame = CGRectMake(0, 476, 320, 100);
     [self.contentScrollView addSubview:_wantProductionView];
     
@@ -93,6 +96,31 @@
 {
     // ViewModelがCustomViewに表示するデータを持っててここでセットしたらいいんじゃね?
     // ActionとかもViewModelに持たせとく必要がある.
+}
+
+#pragma mark - CMDWatchedProductionViewDelegate
+
+- (void)tappedProductionCell:(UITableViewCell *)cell
+{
+//    [self performSegueWithIdentifier:kCMDStoryBoardSegueProductionCommentIdentifier sender:self];
+    UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
+    [self.navigationController pushViewController:productionCommentVC animated:YES];
+}
+
+#pragma mark - CMDLikeProductionViewDelegate
+
+- (void)tappedLikeProductionCell:(UITableViewCell *)cell
+{
+    UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
+    [self.navigationController pushViewController:productionCommentVC animated:YES];
+}
+
+#pragma mark - CMDWantProductionViewDelegate
+
+- (void)tappedWantProductionImageView
+{
+    CMDProductionPageViewController *productionPageVC = [CMDProductionPageViewController productionPageViewController];
+    [self.navigationController pushViewController:productionPageVC animated:YES];
 }
 
 @end
