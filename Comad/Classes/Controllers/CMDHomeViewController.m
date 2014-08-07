@@ -11,6 +11,7 @@
 #import "CMDAppDelegate.h"
 
 #import "CMDSideMenuViewController.h"
+#import "CMDProductionPageViewController.h"
 
 NSArray * kHomeTableViewTestCells;
 
@@ -188,7 +189,8 @@ NSArray * kHomeTableViewTestCells;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
+    [self.navigationController pushViewController:productionPageViewController animated:YES];
 }
 
 #pragma mark - UIActionSheetDelegate
