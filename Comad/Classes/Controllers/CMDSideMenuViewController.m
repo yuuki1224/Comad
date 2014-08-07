@@ -1,12 +1,12 @@
 //
-//  CMDSideMenuView.m
+//  CMDSideMenuViewController.m
 //  Comad
 //
-//  Created by AsanoYuki on 2014/07/20.
+//  Created by AsanoYuki on 2014/08/07.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
-#import "CMDSideMenuView.h"
+#import "CMDSideMenuViewController.h"
 
 static NSString * const kMenuInfoTitleString = @"基本";
 static NSString * const kMenuSearchTitleString = @"探す";
@@ -16,16 +16,18 @@ NSArray * kMenuInfoTitles;
 NSArray * kMenuSearchTitles;
 NSArray * kMenuSettingsTitles;
 
-@implementation CMDSideMenuView
+@interface CMDSideMenuViewController ()
+
+@end
+
+@implementation CMDSideMenuViewController
 
 #pragma mark - Class method
 
-+ (instancetype)sideMenuView
++ (instancetype)sideMenuViewController
 {
-    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *sideMenuViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
-    
-    return (CMDSideMenuView *)sideMenuViewVC.view;
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
+    return [mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDSideMenuViewController class])];
 }
 
 #pragma mark - LifeCycle
@@ -57,6 +59,18 @@ NSArray * kMenuSettingsTitles;
                             ];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 #pragma mark - Private
 
 - (CMDSideMenuCell)p_cellTypeWithIndexPath:(NSIndexPath *)indexPath
@@ -81,9 +95,12 @@ NSArray * kMenuSettingsTitles;
 
 - (void)tappedUserImage:(id)sender
 {
+    // Notificationにするのがいいかと
+    /*
     if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)]) {
         [self.delegate sideMenuTapped:CMDSideMenuUserPage];
     }
+     */
 }
 
 #pragma mark - UITableView DateSource
@@ -157,10 +174,12 @@ NSArray * kMenuSettingsTitles;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
-    {
-        [self.delegate sideMenuTapped:[self p_cellTypeWithIndexPath:indexPath]];
-    }
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:kCMDNotificationSideMenu
+                                      object:self
+                                    userInfo:@{
+                                               @"tappedCell": @([self p_cellTypeWithIndexPath:indexPath]),
+                                               }];
 }
 
 @end

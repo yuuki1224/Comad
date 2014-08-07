@@ -8,16 +8,25 @@
 
 #import "CMDAppDelegate.h"
 
+#import "CMDHomeViewController.h"
+
+#import "CMDSideMenuViewController.h"
+
 @implementation CMDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /*
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.viewController = [[JASidePanelController alloc] init];
+    self.viewController.panningLimitedToTopViewController = NO;
+    self.viewController.centerPanel = [CMDHomeViewController navigationController];
+    self.viewController.leftPanel = [CMDSideMenuViewController sideMenuViewController];
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-     */
+    
     return YES;
 }
 
