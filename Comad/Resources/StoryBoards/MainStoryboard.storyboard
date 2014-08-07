@@ -530,7 +530,7 @@
         <!--Navigation Controller-->
         <scene sceneID="NEz-MW-gtw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l7b-BM-rNy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CMDNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="l7b-BM-rNy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5FL-DG-HKe"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -1038,6 +1038,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTj-3Y-ygO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114" y="-789"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="B93-wZ-6fz">
+            <objects>
+                <viewController storyboardIdentifier="CMDSideMenuViewController" id="ZcD-Rj-pgz" customClass="CMDSideMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u5W-4r-WiV"/>
+                        <viewControllerLayoutGuide type="bottom" id="vym-rf-ewu"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.89999997615814209" contentMode="scaleToFill" id="x9r-ud-GZi">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xT6-zh-r2b">
+                                <rect key="frame" x="0.0" y="82" width="280" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.55962574480000005" green="0.57377445699999996" blue="0.56698715690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="CMDSideMenuTableCell" rowHeight="35" id="NG3-LD-l3Z">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.30000001192092896" contentMode="center" tableViewCell="NG3-LD-l3Z" id="Qlf-oT-Eom">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ホーム" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukz-OS-mT2">
+                                                    <rect key="frame" x="20" y="8" width="240" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZcD-Rj-pgz" id="5Bs-z8-atC"/>
+                                    <outlet property="delegate" destination="ZcD-Rj-pgz" id="4rb-hZ-Llg"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="浅野 友希" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-fL-dSi">
+                                <rect key="frame" x="87" y="15" width="74" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleProfileImage1" translatesAutoresizingMaskIntoConstraints="NO" id="2gW-dr-cpb">
+                                <rect key="frame" x="20" y="12.5" width="53" height="53"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dbp-5v-CbX" appends="YES" id="Ut3-OG-H9J"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="favorite: 52fav" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-jf-Tqe">
+                                <rect key="frame" x="87" y="38.5" width="109" height="15"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="280" height="568"/>
+                    <connections>
+                        <outlet property="favoriteLabel" destination="SpO-jf-Tqe" id="e02-vi-tAw"/>
+                        <outlet property="nameLabel" destination="WaW-fL-dSi" id="3FY-1D-RHi"/>
+                        <outlet property="profileImageView" destination="2gW-dr-cpb" id="0PM-yj-QQX"/>
+                        <outlet property="sideMenuTabel" destination="xT6-zh-r2b" id="Yth-Ui-sI7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2D-Tb-7xM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dbp-5v-CbX">
+                    <connections>
+                        <action selector="tappedUserImage:" destination="ZcD-Rj-pgz" id="SJ1-Xb-6AK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-191" y="50"/>
         </scene>
     </scenes>
     <resources>

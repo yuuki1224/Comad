@@ -1,8 +1,8 @@
 //
-//  CMDSideMenuView.h
+//  CMDSideMenuViewController.h
 //  Comad
 //
-//  Created by AsanoYuki on 2014/07/20.
+//  Created by AsanoYuki on 2014/08/07.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
@@ -37,22 +37,15 @@ typedef NS_ENUM(NSInteger, CMDSideMenuCell)
     CMDSideMenuLogout,
 };
 
-@protocol CMDSideMenuViewDelegate <NSObject>
-@optional
-- (void)sideMenuTapped:(CMDSideMenuCell)cellType;
-
-@end
-
-@interface CMDSideMenuView : UIView <UITableViewDataSource, UITableViewDelegate>
-
-@property (weak, nonatomic) id<CMDSideMenuViewDelegate> delegate;
+@interface CMDSideMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UITableView *sideMenuTabel;
 
-+ (instancetype)sideMenuView;
++ (instancetype)sideMenuViewController;
+
 - (IBAction)tappedUserImage:(id)sender;
 
 @end

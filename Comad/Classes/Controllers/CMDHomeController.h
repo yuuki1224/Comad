@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CMDSideMenuView.h"
 
-@interface CMDHomeController : NSObject <CMDSideMenuViewDelegate, UIActionSheetDelegate>
+@interface CMDHomeController : NSObject <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableViewController *viewController;
 
 - (IBAction)tappedMenu:(id)sender;
+
++ (id)navigationViewController;
 
 @end

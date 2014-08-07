@@ -7,6 +7,7 @@
 //
 
 #import "CMDHomeController.h"
+#import "CMDAppDelegate.h"
 
 @implementation CMDHomeController {
     // Storyboard
@@ -15,11 +16,16 @@
     UIStoryboard *_customViewStoryboard;
     UIStoryboard *_settingsStoryboard;
     
-    // CustomView
-    CMDSideMenuView *_sideMenu;
-    
     UIView *_backView;
     UITapGestureRecognizer *_tapGestureRecognizer;
+}
+
+#pragma mark - Class method
+
++ (id)navigationViewController
+{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
+    return [mainStoryboard instantiateViewControllerWithIdentifier:@"CMDNavigationController"];
 }
 
 #pragma mark - LifeCycle
@@ -31,49 +37,21 @@
     _productionListStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardProductionListIdentifier bundle:nil];
     _customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
     _settingsStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardSettingsIdentifier bundle:nil];
-    
-    _sideMenu = [CMDSideMenuView sideMenuView];
-    _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
-    _sideMenu.delegate = self;
-    
-    _backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
-    _backView.backgroundColor = [UIColor blackColor];
-    _backView.alpha = 0.5;
-    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackView:)];
-    [_backView addGestureRecognizer:_tapGestureRecognizer];
 }
 
 #pragma mark - Private
-
-- (void)p_hideSideBarAndBackView
-{
-    [_backView removeFromSuperview];
-    [UIView animateWithDuration:0.1 animations:^{
-        _sideMenu.frame = CGRectMake(-280, 0, 280, 568);
-    }];
-}
-
-#pragma mark - UITapGestureRecognizer Action
-
-- (void)tapBackView:(UITapGestureRecognizer *)sender
-{
-    [self p_hideSideBarAndBackView];
-}
 
 #pragma mark - IBAction
 
 - (void)tappedMenu:(id)sender
 {
-    [self.viewController.navigationController.view addSubview:_backView];
-    [self.viewController.navigationController.view addSubview:_sideMenu];
-    
-    [UIView animateWithDuration:0.2 animations:^{
-        _sideMenu.frame = CGRectMake(0, 0, 280, 568);
-    }];
+    CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate.viewController showLeftPanelAnimated:YES];
 }
 
 #pragma mark - CMDSideMenuDelegate
 
+/*
 - (void)sideMenuTapped:(CMDSideMenuCell)cellType
 {
     if (cellType == CMDSideMenuLogout) {
@@ -86,8 +64,6 @@
         [logoutActionSheet showInView:self.viewController.navigationController.view];
         return;
     }
-    
-    [self p_hideSideBarAndBackView];
     
     // Segue呼び出し
     switch (cellType) {
@@ -185,6 +161,7 @@
             break;
     }
 }
+*/
 
 #pragma mark - UIActionSheetDelegate
 
@@ -192,7 +169,6 @@
 {
     if (buttonIndex == 0) {
         // ログアウト処理
-        [self p_hideSideBarAndBackView];
         
         // rootViewControllerをCMDInitialViewControllerをイニシャライズしてセット
         UIViewController *initialViewController = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CMDInitialViewController"];
