@@ -621,20 +621,14 @@
                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="l7b-BM-rNy" kind="modal" id="VuB-MV-OH6"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91400271045918369" green="0.91400271045918369" blue="0.91400271045918369" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <segue destination="l7b-BM-rNy" kind="push" id="hGr-aL-oKw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTj-3Y-ygO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-789"/>
+            <point key="canvasLocation" x="90" y="-691"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="B93-wZ-6fz">
@@ -737,7 +731,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="VuB-MV-OH6"/>
-    </inferredMetricsTieBreakers>
 </document>

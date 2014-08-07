@@ -135,6 +135,7 @@ NSArray * kHomeTableViewTestCells;
         return;
     }
     
+     [self.navigationController popToRootViewControllerAnimated:NO];
      // Segue呼び出し
      switch (cellType) {
              case CMDSideMenuUserPage:
@@ -297,18 +298,10 @@ NSArray * kHomeTableViewTestCells;
         
         // rootViewControllerをCMDInitialViewControllerをイニシャライズしてセット
         UIViewController *initialViewController = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CMDInitialViewController"];
-        UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+        CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;
+        UIWindow *window = appDelegate.window;
         window.rootViewController = initialViewController;
     }
 }
-
-#pragma mark - CMDSideMenuDelegate
-
-/*
- - (void)sideMenuTapped:(CMDSideMenuCell)cellType
- {
- 
- }
- */
 
 @end
