@@ -91,16 +91,21 @@ NSArray * kMenuSettingsTitles;
     return cellType;
 }
 
+- (void)p_postNotificationWithCellType:(CMDSideMenuCell)cellType
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:kCMDNotificationSideMenu
+                                      object:self
+                                    userInfo:@{
+                                               @"tappedCell": @(cellType),
+                                               }];
+}
+
 #pragma mark - IBAction
 
 - (void)tappedUserImage:(id)sender
 {
-    // Notificationにするのがいいかと
-    /*
-    if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)]) {
-        [self.delegate sideMenuTapped:CMDSideMenuUserPage];
-    }
-     */
+    [self p_postNotificationWithCellType:CMDSideMenuUserPage];
 }
 
 #pragma mark - UITableView DateSource
@@ -174,12 +179,7 @@ NSArray * kMenuSettingsTitles;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter postNotificationName:kCMDNotificationSideMenu
-                                      object:self
-                                    userInfo:@{
-                                               @"tappedCell": @([self p_cellTypeWithIndexPath:indexPath]),
-                                               }];
+    [self p_postNotificationWithCellType:[self p_cellTypeWithIndexPath:indexPath]];
 }
 
 @end
