@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString * const kCMDNotificationSideMenu = @"CMDNotificationSideMenu";
+
 typedef NS_ENUM(NSInteger, CMDSideMenuCell)
 {
     // User Image

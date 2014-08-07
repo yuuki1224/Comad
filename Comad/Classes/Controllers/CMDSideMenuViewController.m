@@ -174,6 +174,13 @@ NSArray * kMenuSettingsTitles;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:kCMDNotificationSideMenu
+                                      object:self
+                                    userInfo:@{
+                                               @"tappedCell": @([self p_cellTypeWithIndexPath:indexPath]),
+                                               }];
+    
     /*
     if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
     {
