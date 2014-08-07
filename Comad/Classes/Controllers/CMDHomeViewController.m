@@ -12,6 +12,8 @@
 
 #import "CMDSideMenuViewController.h"
 
+NSArray * kHomeTableViewTestCells;
+
 @interface CMDHomeViewController ()
 {
     // Storyboard
@@ -39,6 +41,49 @@
 
 - (void)awakeFromNib
 {
+    kHomeTableViewTestCells = @[
+                                @{
+                                    @"productionImage": @"sampleMovie6",
+                                    @"productionName": @"トランセンデンス",
+                                    @"personImage": @"sampleProfileImage1",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleAnime1",
+                                    @"productionName": @"六畳間の侵略者!?",
+                                    @"personImage": @"sampleProfileImage2",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleDrama1",
+                                    @"productionName": @"家族狩り",
+                                    @"personImage": @"sampleProfileImage3",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleMovie4",
+                                    @"productionName": @"ノアの箱舟",
+                                    @"personImage": @"sampleProfileImage4",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleDrama3",
+                                    @"productionName": @"GTO",
+                                    @"personImage": @"sampleProfileImage1",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleAnime2",
+                                    @"productionName": @"Free!!!",
+                                    @"personImage": @"sampleProfileImage2",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleDrama5",
+                                    @"productionName": @"同窓生 〜人は3度恋をする〜",
+                                    @"personImage": @"sampleProfileImage3",
+                                    },
+                                @{
+                                    @"productionImage": @"sampleMovie1",
+                                    @"productionName": @"私のハワイの歩き方",
+                                    @"personImage": @"sampleProfileImage4",
+                                    },
+                                ];
+    
     // storyboardインスタンス化
     _mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
     _productionListStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardProductionListIdentifier bundle:nil];
@@ -103,7 +148,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [kHomeTableViewTestCells count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -114,6 +159,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CMDHomeTableViewCell"];
+    
+    NSString *productionImageName = [kHomeTableViewTestCells[indexPath.row] valueForKey:@"productionImage"];
+    NSString *productionName = [kHomeTableViewTestCells[indexPath.row] valueForKey:@"productionName"];
+    NSString *personImageName = [kHomeTableViewTestCells[indexPath.row] valueForKey:@"personImage"];
+    
+    UIImageView *productionImageView = (UIImageView *)[cell viewWithTag:1];
+    [productionImageView setImage:[UIImage imageNamed:productionImageName]];
+    UILabel *productionNameLabel = (UILabel *)[cell viewWithTag:2];
+    [productionNameLabel setText:productionName];
+    UIImageView *profileImageView = (UIImageView *)[cell viewWithTag:3];
+    [profileImageView setImage:[UIImage imageNamed:personImageName]];
+    
     return cell;
 }
 
