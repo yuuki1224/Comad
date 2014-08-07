@@ -14,6 +14,9 @@
 //#import "CMDRelatedProductionView.h"
 //#import "CMDWantProductionPeopleView.h"
 
+// ViewController
+#import "CMDUserPageViewController.h"
+
 @interface CMDProductionPageViewController ()
 {
     CMDProductionDescriptionView *_productionDescriptionView;
@@ -109,7 +112,8 @@
 
 - (void)tappedPerson
 {
-    [self performSegueWithIdentifier:@"CMDUserPageSegue" sender:self];
+    CMDUserPageViewController *userPageViewController = [CMDUserPageViewController userPageViewController];
+    [self.navigationController pushViewController:userPageViewController animated:YES];
 }
 
 @end

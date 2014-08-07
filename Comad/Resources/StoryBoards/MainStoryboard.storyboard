@@ -521,7 +521,6 @@
                     <connections>
                         <outlet property="contentScrollView" destination="Oa3-dE-w4y" id="QXz-Nd-HJT"/>
                         <segue destination="JAU-GS-oHy" kind="push" identifier="CMDProductionCommentListSegue" id="q9v-Wu-B4y"/>
-                        <segue destination="KCM-Cg-rPA" kind="push" identifier="CMDUserPageSegue" id="Rjq-ww-A0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK6-RC-fMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -577,7 +576,7 @@
         <!--User Page View Controller - あなたのページ-->
         <scene sceneID="Kzv-QG-TOd">
             <objects>
-                <viewController id="7vi-lp-Cjh" customClass="CMDUserPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CMDUserPageViewController" id="7vi-lp-Cjh" customClass="CMDUserPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T3f-pS-GZC"/>
                         <viewControllerLayoutGuide type="bottom" id="C8I-8m-dvu"/>
@@ -600,32 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCO-SE-1FW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="-710"/>
-        </scene>
-        <!--User Page View Controller - あなたのページ-->
-        <scene sceneID="QHo-Wm-ljX">
-            <objects>
-                <viewController id="KCM-Cg-rPA" customClass="CMDUserPageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YZY-ro-K1r"/>
-                        <viewControllerLayoutGuide type="bottom" id="TXI-oe-CGY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p5Z-hJ-pkx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-Bd-DZI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="あなたのページ" id="9By-jj-SzG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pyt-Bg-gA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1800" y="-710"/>
+            <point key="canvasLocation" x="1246" y="-832"/>
         </scene>
         <!--Table View Controller - 浅野 友希さんの今までに見た作品-->
         <scene sceneID="KMV-n7-1E8">

@@ -39,6 +39,14 @@
 
 @implementation CMDUserPageViewController
 
+#pragma mark - Class method
+
++ (instancetype)userPageViewController
+{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardMainIdentifier bundle:nil];
+    return [mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDUserPageViewController class])];
+}
+
 #pragma mark - LifeCycle
 
 - (void)awakeFromNib
