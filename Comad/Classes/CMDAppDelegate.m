@@ -8,7 +8,8 @@
 
 #import "CMDAppDelegate.h"
 
-#import "CMDHomeController.h"
+#import "CMDHomeViewController.h"
+
 #import "CMDSideMenuViewController.h"
 
 @implementation CMDAppDelegate
@@ -17,7 +18,7 @@
 {
     self.viewController = [[JASidePanelController alloc] init];
     self.viewController.panningLimitedToTopViewController = NO;
-    self.viewController.centerPanel = [CMDHomeController navigationViewController];
+    self.viewController.centerPanel = [CMDHomeViewController navigationController];
     self.viewController.leftPanel = [CMDSideMenuViewController sideMenuViewController];
     
     // Override point for customization after application launch.

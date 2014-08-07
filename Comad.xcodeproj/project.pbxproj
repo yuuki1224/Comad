@@ -30,7 +30,6 @@
 		492916DF197A937C002AB7F8 /* ComadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916DE197A937C002AB7F8 /* ComadTests.m */; };
 		492916E9197A93CC002AB7F8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */; };
 		492916F5197AD760002AB7F8 /* CMDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916F4197AD760002AB7F8 /* CMDConstants.m */; };
-		492916F8197AD949002AB7F8 /* CMDHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916F7197AD949002AB7F8 /* CMDHomeController.m */; };
 		492916FE197BBB37002AB7F8 /* CMDProductionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492916FD197BBB37002AB7F8 /* CMDProductionPageViewController.m */; };
 		49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291704197BC1DD002AB7F8 /* CMDProductionDescriptionView.m */; };
 		4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49291709197BC583002AB7F8 /* CMDRelatedProductionView.m */; };
@@ -46,6 +45,7 @@
 		49E84AD119928C7000580F4E /* CMDLikeProductionView+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AD019928C7000580F4E /* CMDLikeProductionView+RACSupport.m */; };
 		49E84AD71992945D00580F4E /* CMDWantProductionView+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AD61992945D00580F4E /* CMDWantProductionView+RACSupport.m */; };
 		49E84ADA199363F100580F4E /* CMDSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AD9199363F100580F4E /* CMDSideMenuViewController.m */; };
+		49E84ADD1993AC5E00580F4E /* CMDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ADC1993AC5E00580F4E /* CMDHomeViewController.m */; };
 		AFF743CF4CAB48D1AF16FCD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 518F043140AA45EBA49B1253 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,8 +89,6 @@
 		492916DE197A937C002AB7F8 /* ComadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComadTests.m; sourceTree = "<group>"; };
 		492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		492916F4197AD760002AB7F8 /* CMDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDConstants.m; sourceTree = "<group>"; };
-		492916F6197AD949002AB7F8 /* CMDHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHomeController.h; sourceTree = "<group>"; };
-		492916F7197AD949002AB7F8 /* CMDHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHomeController.m; sourceTree = "<group>"; };
 		492916FC197BBB37002AB7F8 /* CMDProductionPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDProductionPageViewController.h; sourceTree = "<group>"; };
 		492916FD197BBB37002AB7F8 /* CMDProductionPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDProductionPageViewController.m; sourceTree = "<group>"; };
 		49291703197BC1DD002AB7F8 /* CMDProductionDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDProductionDescriptionView.h; sourceTree = "<group>"; };
@@ -121,6 +119,8 @@
 		49E84AD61992945D00580F4E /* CMDWantProductionView+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMDWantProductionView+RACSupport.m"; sourceTree = "<group>"; };
 		49E84AD8199363F100580F4E /* CMDSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDSideMenuViewController.h; sourceTree = "<group>"; };
 		49E84AD9199363F100580F4E /* CMDSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDSideMenuViewController.m; sourceTree = "<group>"; };
+		49E84ADB1993AC5E00580F4E /* CMDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHomeViewController.h; sourceTree = "<group>"; };
+		49E84ADC1993AC5E00580F4E /* CMDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHomeViewController.m; sourceTree = "<group>"; };
 		518F043140AA45EBA49B1253 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8514064D06C04A908D1B8D5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,8 +268,8 @@
 		492916EF197AD368002AB7F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				492916F6197AD949002AB7F8 /* CMDHomeController.h */,
-				492916F7197AD949002AB7F8 /* CMDHomeController.m */,
+				49E84ADB1993AC5E00580F4E /* CMDHomeViewController.h */,
+				49E84ADC1993AC5E00580F4E /* CMDHomeViewController.m */,
 				49E84AD8199363F100580F4E /* CMDSideMenuViewController.h */,
 				49E84AD9199363F100580F4E /* CMDSideMenuViewController.m */,
 				492916FC197BBB37002AB7F8 /* CMDProductionPageViewController.h */,
@@ -548,12 +548,12 @@
 				49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */,
 				49E84ACA19922E9E00580F4E /* CMDUserPageViewModel.m in Sources */,
 				49E84AC419922CD400580F4E /* CMDUserHeaderView.m in Sources */,
+				49E84ADD1993AC5E00580F4E /* CMDHomeViewController.m in Sources */,
 				49291705197BC1DD002AB7F8 /* CMDProductionDescriptionView.m in Sources */,
 				49E84AC719922E8400580F4E /* CMDUserPageViewController.m in Sources */,
 				4929170A197BC583002AB7F8 /* CMDRelatedProductionView.m in Sources */,
 				492916C6197A937C002AB7F8 /* CMDAppDelegate.m in Sources */,
 				49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */,
-				492916F8197AD949002AB7F8 /* CMDHomeController.m in Sources */,
 				49E84ACE1992843200580F4E /* CMDWatchedProductionView+RACSupport.m in Sources */,
 				492916F5197AD760002AB7F8 /* CMDConstants.m in Sources */,
 				49E84AD71992945D00580F4E /* CMDWantProductionView+RACSupport.m in Sources */,
