@@ -180,13 +180,6 @@ NSArray * kMenuSettingsTitles;
                                     userInfo:@{
                                                @"tappedCell": @([self p_cellTypeWithIndexPath:indexPath]),
                                                }];
-    
-    /*
-    if ([self.delegate respondsToSelector:@selector(sideMenuTapped:)])
-    {
-        [self.delegate sideMenuTapped:[self p_cellTypeWithIndexPath:indexPath]];
-    }
-     */
 }
 
 @end
