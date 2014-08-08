@@ -297,6 +297,7 @@ NSArray * kHomeTableViewTestCells;
     if (buttonIndex == 0) {
         // ログアウト処理
         
+        [self.navigationController popToRootViewControllerAnimated:NO];
         // rootViewControllerをCMDInitialViewControllerをイニシャライズしてセット
         CMDIntroductionViewController *introductionViewController = [CMDIntroductionViewController introductionViewController];
         CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;

@@ -8,6 +8,8 @@
 
 #import "CMDLikeListViewController.h"
 
+#import "CMDProductionPageViewController.h"
+
 @interface CMDLikeListViewController ()
 
 @end
@@ -75,7 +77,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
+    [self.navigationController pushViewController:productionPageViewController animated:YES];
 }
 
 @end

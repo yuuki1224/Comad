@@ -8,6 +8,8 @@
 
 #import "CMDCommentListViewController.h"
 
+#import "CMDUserPageViewController.h"
+
 @interface CMDCommentListViewController ()
 
 @end
@@ -75,7 +77,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CMDUserPageViewController *userPageViewController = [CMDUserPageViewController userPageViewController];
+    [self.navigationController pushViewController:userPageViewController animated:YES];
 }
 
 @end
