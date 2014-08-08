@@ -16,6 +16,7 @@
 
 // ViewController
 #import "CMDUserPageViewController.h"
+#import "CMDCommentListViewController.h"
 
 @interface CMDProductionPageViewController ()
 {
@@ -88,7 +89,8 @@
 
 - (void)tappedCommentCell:(UITableViewCell *)cell
 {
-    [self performSegueWithIdentifier:@"CMDProductionCommentListSegue" sender:self];
+    CMDCommentListViewController *commentListViewController = [CMDCommentListViewController commentListViewController];
+    [self.navigationController pushViewController:commentListViewController animated:YES];
 }
 
 - (void)tappedOthersComment
@@ -104,8 +106,8 @@
     NSLog(@"viewControllers: %@", self.navigationController.viewControllers);
     NSLog(@"count: %d", [self.navigationController.viewControllers count]);
     
-    UIViewController *relatedProductionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionPageViewController"];
-    [self.navigationController pushViewController:relatedProductionVC animated:YES];
+    CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
+    [self.navigationController pushViewController:productionPageViewController animated:YES];
 }
 
 #pragma mark - CMDWantProductionPeopleViewDelegate

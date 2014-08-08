@@ -22,6 +22,8 @@
 
 // ViewController
 #import "CMDProductionPageViewController.h"
+#import "CMDWatchedListViewController.h"
+#import "CMDLikeListViewController.h"
 
 #import <ReactiveCocoa/RACEXTScope.h>
 
@@ -115,25 +117,25 @@
     // CMDWatchedProductionView
     [_watchedProductionView.rac_tappedWatchedProductionCellSignal subscribeNext:^(UITableViewCell *cell) {
         @strongify(self);
-        UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
-        [self.navigationController pushViewController:productionCommentVC animated:YES];
+        CMDWatchedListViewController *watchedListViewController = [CMDWatchedListViewController watchedListViewController];
+        [self.navigationController pushViewController:watchedListViewController animated:YES];
     }];
     [_watchedProductionView.rac_tappedOthersCommentSignal subscribeNext:^(id x) {
         @strongify(self);
-        UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
-        [self.navigationController pushViewController:productionCommentVC animated:YES];
+        CMDWatchedListViewController *watchedListViewController = [CMDWatchedListViewController watchedListViewController];
+        [self.navigationController pushViewController:watchedListViewController animated:YES];
     }];
     
     // CMDLikeProductionView
     [_likeProductionView.rac_tappedLikeProductionCellSignal subscribeNext:^(UITableViewCell *cell) {
         @strongify(self);
-        UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
-        [self.navigationController pushViewController:productionCommentVC animated:YES];
+        CMDLikeListViewController *likeListViewController = [CMDLikeListViewController likeListViewController];
+        [self.navigationController pushViewController:likeListViewController animated:YES];
     }];
     [_likeProductionView.rac_tappedOthersLikeProductionSignal subscribeNext:^(id x) {
         @strongify(self);
-        UIViewController *productionCommentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CMDProductionCommant"];
-        [self.navigationController pushViewController:productionCommentVC animated:YES];
+        CMDLikeListViewController *likeListViewController = [CMDLikeListViewController likeListViewController];
+        [self.navigationController pushViewController:likeListViewController animated:YES];
     }];
     
     // CMDWantProductionView
