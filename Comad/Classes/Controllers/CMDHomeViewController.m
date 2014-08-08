@@ -12,6 +12,7 @@
 
 #import "CMDSideMenuViewController.h"
 #import "CMDProductionPageViewController.h"
+#import "CMDIntroductionViewController.h"
 
 NSArray * kHomeTableViewTestCells;
 
@@ -297,10 +298,10 @@ NSArray * kHomeTableViewTestCells;
         // ログアウト処理
         
         // rootViewControllerをCMDInitialViewControllerをイニシャライズしてセット
-        UIViewController *initialViewController = [_mainStoryboard instantiateViewControllerWithIdentifier:@"CMDInitialViewController"];
+        CMDIntroductionViewController *introductionViewController = [CMDIntroductionViewController introductionViewController];
         CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;
         UIWindow *window = appDelegate.window;
-        window.rootViewController = initialViewController;
+        window.rootViewController = introductionViewController;
     }
 }
 
