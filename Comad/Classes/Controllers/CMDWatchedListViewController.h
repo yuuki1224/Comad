@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *watchedListTable;
 
+- (IBAction)longTappedCell:(id)sender;
+
 @end

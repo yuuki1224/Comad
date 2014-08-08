@@ -430,6 +430,64 @@
             <point key="canvasLocation" x="-571" y="-763"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="qcg-ey-3R1">
+            <objects>
+                <viewController storyboardIdentifier="CMDHukidashiViewController" id="teJ-t3-ZuM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BbH-Bt-C6J"/>
+                        <viewControllerLayoutGuide type="bottom" id="AlM-vy-nvp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TYG-J0-qTp" customClass="CMDHukidashiView">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="hukidashi" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-XM-hyl">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Bcu-TU-aF2">
+                                <rect key="frame" x="2" y="21" width="195" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CMDChoiceListTableCell" rowHeight="37" id="n1U-m5-yPv">
+                                        <rect key="frame" x="0.0" y="22" width="195" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n1U-m5-yPv" id="S7Q-z2-Lss">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="36"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="この作品微妙だなあ〜" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-oh-QcY">
+                                                    <rect key="frame" x="20" y="7" width="140" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                                    <color key="textColor" red="0.39777981505102045" green="0.39777981505102045" blue="0.39777981505102045" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TYG-J0-qTp" id="jTk-od-gDh"/>
+                                    <outlet property="delegate" destination="TYG-J0-qTp" id="4Dm-Ih-geN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="choiceListTable" destination="Bcu-TU-aF2" id="bF0-X7-QSE"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="180"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeG-xh-ieN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="-466"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="fVd-n5-sYD">
             <objects>
                 <viewController storyboardIdentifier="CMDWantProductionView" id="fwK-md-g97" sceneMemberID="viewController">
@@ -678,6 +736,7 @@
         <image name="ProfileImage" width="200" height="200"/>
         <image name="SampleImage1" width="200" height="200"/>
         <image name="SampleImage2" width="200" height="200"/>
+        <image name="hukidashi" width="135" height="136"/>
         <image name="sampleAnime1" width="107" height="107"/>
         <image name="sampleAnime4" width="162" height="163"/>
         <image name="sampleMovie6" width="95" height="95"/>

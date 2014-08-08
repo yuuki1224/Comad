@@ -8,9 +8,18 @@
 
 #import "CMDWatchedListViewController.h"
 
+// CoreGraphics Quartzっていうんじゃね
+#import <CoreGraphics/CoreGraphics.h>
+
 #import "CMDProductionPageViewController.h"
+#import "CMDAppDelegate.h"
+
+#import "CMDHukidashiView.h"
 
 @interface CMDWatchedListViewController ()
+{
+    UIView *_backView;
+}
 
 @end
 
@@ -33,10 +42,20 @@
     return self;
 }
 
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIScreen *mainScreen = [UIScreen mainScreen];
+    _backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(mainScreen.bounds), CGRectGetHeight(mainScreen.bounds))];
+    [_backView setBackgroundColor:[UIColor blackColor]];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackView:)];
+    [_backView addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +79,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CMDWatchedListTableCell"];
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressCell:)];
+    
+    [cell addGestureRecognizer:longPressGestureRecognizer];
+    
     return cell;
 }
 
@@ -79,6 +102,42 @@
 {
     CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
     [self.navigationController pushViewController:productionPageViewController animated:YES];
+}
+
+#pragma mark - UILongPressGestureRecognizer
+
+- (void)longPressCell:(id)sender
+{
+    UILongPressGestureRecognizer *longPressGestureRecognizer = (UILongPressGestureRecognizer *)sender;
+    
+    if (longPressGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        for (UIView *subView in _backView.subviews) {
+            [subView removeFromSuperview];
+        }
+        [_backView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]];
+        CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;
+        [appDelegate.viewController.view addSubview:_backView];
+        
+        CMDHukidashiView *hukidashiView = [CMDHukidashiView hukidashiView];
+        CGFloat hukidashiY = CGRectGetMaxY(longPressGestureRecognizer.view.frame) + CGRectGetHeight(longPressGestureRecognizer.view.frame);
+        hukidashiView.frame = CGRectMake(100, hukidashiY, 200, 200);
+        [_backView addSubview:hukidashiView];
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            [_backView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.15]];
+        }];
+    } else if (longPressGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        
+    }
+}
+
+#pragma mark - UITapGestureRecognizer
+
+- (void)tappedBackView:(id)sender
+{
+    UITapGestureRecognizer *tapGestureRecognizer = (UITapGestureRecognizer *)sender;
+    
+    [_backView removeFromSuperview];
 }
 
 @end

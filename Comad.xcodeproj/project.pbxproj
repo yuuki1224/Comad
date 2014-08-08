@@ -40,6 +40,7 @@
 		49A3A92D1994AC9E00B0AAB5 /* CMDCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A3A92C1994AC9E00B0AAB5 /* CMDCommentListViewController.m */; };
 		49A3A9301994ACE800B0AAB5 /* ListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A3A92F1994ACE800B0AAB5 /* ListStoryboard.storyboard */; };
 		49A3A9331994BB2700B0AAB5 /* CMDIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A3A9321994BB2700B0AAB5 /* CMDIntroductionViewController.m */; };
+		49B6AF2A19952FEC00FBD804 /* CMDHukidashiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */; };
 		49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AB71990E5BA00580F4E /* _CMDUser.m */; };
 		49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ABA1990E5C400580F4E /* CMDUser.m */; };
 		49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC01992200300580F4E /* CMDUserViewModel.m */; };
@@ -113,6 +114,8 @@
 		49A3A92F1994ACE800B0AAB5 /* ListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListStoryboard.storyboard; sourceTree = "<group>"; };
 		49A3A9311994BB2700B0AAB5 /* CMDIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDIntroductionViewController.h; sourceTree = "<group>"; };
 		49A3A9321994BB2700B0AAB5 /* CMDIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDIntroductionViewController.m; sourceTree = "<group>"; };
+		49B6AF2819952FEC00FBD804 /* CMDHukidashiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHukidashiView.h; sourceTree = "<group>"; };
+		49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHukidashiView.m; sourceTree = "<group>"; };
 		49E84AB61990E5BA00580F4E /* _CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CMDUser.h; sourceTree = "<group>"; };
 		49E84AB71990E5BA00580F4E /* _CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CMDUser.m; sourceTree = "<group>"; };
 		49E84AB91990E5C400580F4E /* CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUser.h; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				4929170F197BD483002AB7F8 /* CMDProductionCommentView.m */,
 				49291711197BFD3E002AB7F8 /* CMDWantProductionPeopleView.h */,
 				49291712197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m */,
+				49B6AF2819952FEC00FBD804 /* CMDHukidashiView.h */,
+				49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -584,6 +589,7 @@
 				49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */,
 				49061A7B198142CD00DFC8B4 /* CMDLikeProductionView.m in Sources */,
 				49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */,
+				49B6AF2A19952FEC00FBD804 /* CMDHukidashiView.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */,
 				49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */,
