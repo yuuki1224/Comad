@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *choiceListTable;
 
-+ (instancetype)hukidashiView;
++ (instancetype)hukidashiLowerView;
++ (instancetype)hukidashiUpperView;
 
 @end

@@ -432,7 +432,7 @@
         <!--View Controller-->
         <scene sceneID="qcg-ey-3R1">
             <objects>
-                <viewController storyboardIdentifier="CMDHukidashiViewController" id="teJ-t3-ZuM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CMDHukidashiLowerViewController" id="teJ-t3-ZuM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BbH-Bt-C6J"/>
                         <viewControllerLayoutGuide type="bottom" id="AlM-vy-nvp"/>
@@ -441,7 +441,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="hukidashi" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-XM-hyl">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="hukidashiLower" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-XM-hyl">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -486,6 +486,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeG-xh-ieN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-530" y="-466"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RTg-0c-KNw">
+            <objects>
+                <viewController storyboardIdentifier="CMDHukidashiUpperViewController" id="6fJ-MQ-FpR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xse-CL-avH"/>
+                        <viewControllerLayoutGuide type="bottom" id="DXz-WE-0Es"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iyc-jZ-8y4" customClass="CMDHukidashiView">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="hukidashiUpper" translatesAutoresizingMaskIntoConstraints="NO" id="2Jl-Rg-1VT">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="otz-6M-gD7">
+                                <rect key="frame" x="2" y="10" width="195" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CMDChoiceListTableCell" rowHeight="37" id="OPk-wc-ABV">
+                                        <rect key="frame" x="0.0" y="22" width="195" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OPk-wc-ABV" id="dTM-Wo-p7R">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="36"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="この作品微妙だなあ〜" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXw-r3-IPF">
+                                                    <rect key="frame" x="20" y="7" width="140" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                                    <color key="textColor" red="0.39777981509999999" green="0.39777981509999999" blue="0.39777981509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Iyc-jZ-8y4" id="EbE-4Q-3pA"/>
+                                    <outlet property="delegate" destination="Iyc-jZ-8y4" id="ppM-9q-V8O"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="choiceListTable" destination="otz-6M-gD7" id="6gq-FF-XqO"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="180"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B97-he-MK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-787" y="-466"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fVd-n5-sYD">
@@ -736,7 +794,8 @@
         <image name="ProfileImage" width="200" height="200"/>
         <image name="SampleImage1" width="200" height="200"/>
         <image name="SampleImage2" width="200" height="200"/>
-        <image name="hukidashi" width="135" height="136"/>
+        <image name="hukidashiLower" width="135" height="136"/>
+        <image name="hukidashiUpper" width="135" height="136"/>
         <image name="sampleAnime1" width="107" height="107"/>
         <image name="sampleAnime4" width="162" height="163"/>
         <image name="sampleMovie6" width="95" height="95"/>

@@ -14,10 +14,17 @@ NSArray * kHukidashiLists;
 
 #pragma mark - Class method
 
-+ (instancetype)hukidashiView
++ (instancetype)hukidashiUpperView
 {
     UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
-    UIViewController *hukidashiViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDHukidashiViewController"];
+    UIViewController *hukidashiViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDHukidashiUpperViewController"];
+    return (CMDHukidashiView *)hukidashiViewVC.view;
+}
+
++ (instancetype)hukidashiLowerView
+{
+    UIStoryboard *customViewStoryboard = [UIStoryboard storyboardWithName:kCMDStoryBoardCustomViewIdentifier bundle:nil];
+    UIViewController *hukidashiViewVC = [customViewStoryboard instantiateViewControllerWithIdentifier:@"CMDHukidashiLowerViewController"];
     return (CMDHukidashiView *)hukidashiViewVC.view;
 }
 

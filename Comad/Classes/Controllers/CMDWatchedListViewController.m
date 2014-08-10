@@ -16,6 +16,12 @@
 
 #import "CMDHukidashiView.h"
 
+CGFloat const kHukidashiThresholdY = 340;
+
+CGFloat const kHukidashiMarginX = 100;
+CGFloat const kHukidashiWidth = 200;
+CGFloat const kHukidashiHeight = 200;
+
 @interface CMDWatchedListViewController ()
 {
     UIView *_backView;
@@ -64,6 +70,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private
+
+- (CGRect)p_longTappedCellRect:(CGRect)longTappedCellRect WithOffset:(CGPoint)offset
+{
+    CGFloat currentTappedCellY = CGRectGetMinY(longTappedCellRect) - offset.y;
+    
+    CGRect currentTappedCellRect = CGRectMake(CGRectGetMinX(longTappedCellRect), currentTappedCellY, CGRectGetWidth(longTappedCellRect), CGRectGetHeight(longTappedCellRect));
+    
+    return currentTappedCellRect;
+}
+
+- (CMDHukidashiView *)p_hukidashiView:(CGRect)longTappedRect
+{
+    // TODO: Delete MagicNumber
+    CMDHukidashiView *hukidashiView;
+    if (CGRectGetMinY(longTappedRect) > kHukidashiThresholdY) {
+        hukidashiView = [CMDHukidashiView hukidashiUpperView];
+        hukidashiView.frame = CGRectMake(kHukidashiMarginX,
+                                         CGRectGetMinY(longTappedRect) - kHukidashiHeight + 23,
+                                         kHukidashiWidth,
+                                         kHukidashiHeight);
+    } else {
+        hukidashiView = [CMDHukidashiView hukidashiLowerView];
+        hukidashiView.frame = CGRectMake(kHukidashiMarginX,
+                                         CGRectGetMinY(longTappedRect) + CGRectGetHeight(longTappedRect),
+                                         kHukidashiWidth,
+                                         kHukidashiHeight);
+    }
+    
+    return hukidashiView;
+}
+
 #pragma mark - UITableViewDateSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,6 +146,7 @@
 
 - (void)longPressCell:(id)sender
 {
+    // TODO: Considering about Memory
     UILongPressGestureRecognizer *longPressGestureRecognizer = (UILongPressGestureRecognizer *)sender;
     
     if (longPressGestureRecognizer.state == UIGestureRecognizerStateBegan) {
@@ -118,9 +157,8 @@
         CMDAppDelegate *appDelegate = (CMDAppDelegate *)[UIApplication sharedApplication].delegate;
         [appDelegate.viewController.view addSubview:_backView];
         
-        CMDHukidashiView *hukidashiView = [CMDHukidashiView hukidashiView];
-        CGFloat hukidashiY = CGRectGetMaxY(longPressGestureRecognizer.view.frame) + CGRectGetHeight(longPressGestureRecognizer.view.frame);
-        hukidashiView.frame = CGRectMake(100, hukidashiY, 200, 200);
+        CGRect longTappedRect = [self p_longTappedCellRect:longPressGestureRecognizer.view.frame WithOffset:self.watchedListTable.contentOffset];
+        CMDHukidashiView *hukidashiView = [self p_hukidashiView:longTappedRect];
         [_backView addSubview:hukidashiView];
         
         [UIView animateWithDuration:0.2 animations:^{
