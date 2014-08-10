@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pqa-c0-Djv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Comment View Controller-->
+        <scene sceneID="8OA-BJ-spK">
+            <objects>
+                <viewController id="pqa-c0-Djv" customClass="CMDCommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aeA-XB-coR"/>
+                        <viewControllerLayoutGuide type="bottom" id="53S-op-8HM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8Y-8o-xp7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bL-yk-eSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="79"/>
+        </scene>
+        <!--Comment Edit View Controller-->
+        <scene sceneID="Nk6-ic-iBu">
+            <objects>
+                <viewController id="CrQ-Gj-Dx6" customClass="CMDCommentEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XSB-io-dn6"/>
+                        <viewControllerLayoutGuide type="bottom" id="wya-RD-Zee"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0J7-Xm-tbs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3z-no-krS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="79"/>
+        </scene>
+        <!--Comment Request View Controller-->
+        <scene sceneID="fc4-HL-UKC">
+            <objects>
+                <viewController id="IOB-8H-KoG" customClass="CMDCommentRequestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ujX-g9-GrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="uDU-rg-0gi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xh3-Pq-SG1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaI-qF-C7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="761"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -42,6 +42,9 @@
 		49A3A9331994BB2700B0AAB5 /* CMDIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A3A9321994BB2700B0AAB5 /* CMDIntroductionViewController.m */; };
 		49B6AF2A19952FEC00FBD804 /* CMDHukidashiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */; };
 		49E775071997777400225D8E /* CommentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E775061997777400225D8E /* CommentStoryboard.storyboard */; };
+		49E7750B1997782600225D8E /* CMDCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E7750A1997782600225D8E /* CMDCommentViewController.m */; };
+		49E7750E1997783600225D8E /* CMDCommentEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E7750D1997783600225D8E /* CMDCommentEditViewController.m */; };
+		49E775111997785600225D8E /* CMDRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E775101997785600225D8E /* CMDRequestViewController.m */; };
 		49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AB71990E5BA00580F4E /* _CMDUser.m */; };
 		49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ABA1990E5C400580F4E /* CMDUser.m */; };
 		49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC01992200300580F4E /* CMDUserViewModel.m */; };
@@ -118,6 +121,12 @@
 		49B6AF2819952FEC00FBD804 /* CMDHukidashiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHukidashiView.h; sourceTree = "<group>"; };
 		49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHukidashiView.m; sourceTree = "<group>"; };
 		49E775061997777400225D8E /* CommentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentStoryboard.storyboard; sourceTree = "<group>"; };
+		49E775091997782600225D8E /* CMDCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDCommentViewController.h; sourceTree = "<group>"; };
+		49E7750A1997782600225D8E /* CMDCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDCommentViewController.m; sourceTree = "<group>"; };
+		49E7750C1997783600225D8E /* CMDCommentEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDCommentEditViewController.h; sourceTree = "<group>"; };
+		49E7750D1997783600225D8E /* CMDCommentEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDCommentEditViewController.m; sourceTree = "<group>"; };
+		49E7750F1997785600225D8E /* CMDRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDRequestViewController.h; sourceTree = "<group>"; };
+		49E775101997785600225D8E /* CMDRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDRequestViewController.m; sourceTree = "<group>"; };
 		49E84AB61990E5BA00580F4E /* _CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CMDUser.h; sourceTree = "<group>"; };
 		49E84AB71990E5BA00580F4E /* _CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CMDUser.m; sourceTree = "<group>"; };
 		49E84AB91990E5C400580F4E /* CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUser.h; sourceTree = "<group>"; };
@@ -297,6 +306,7 @@
 				492916FD197BBB37002AB7F8 /* CMDProductionPageViewController.m */,
 				49E84AC519922E8400580F4E /* CMDUserPageViewController.h */,
 				49E84AC619922E8400580F4E /* CMDUserPageViewController.m */,
+				49E77508199777FB00225D8E /* Comment */,
 				49A3A9341994BD1A00B0AAB5 /* ProductionList */,
 				49A3A92E1994ACA700B0AAB5 /* List */,
 			);
@@ -392,6 +402,19 @@
 			children = (
 			);
 			name = ProductionList;
+			sourceTree = "<group>";
+		};
+		49E77508199777FB00225D8E /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				49E775091997782600225D8E /* CMDCommentViewController.h */,
+				49E7750A1997782600225D8E /* CMDCommentViewController.m */,
+				49E7750C1997783600225D8E /* CMDCommentEditViewController.h */,
+				49E7750D1997783600225D8E /* CMDCommentEditViewController.m */,
+				49E7750F1997785600225D8E /* CMDRequestViewController.h */,
+				49E775101997785600225D8E /* CMDRequestViewController.m */,
+			);
+			name = Comment;
 			sourceTree = "<group>";
 		};
 		49E84AB21990DAA000580F4E /* ViewModels */ = {
@@ -591,9 +614,12 @@
 				49A3A92D1994AC9E00B0AAB5 /* CMDCommentListViewController.m in Sources */,
 				49061A78198142C000DFC8B4 /* CMDWatchedProductionView.m in Sources */,
 				49291713197BFD3E002AB7F8 /* CMDWantProductionPeopleView.m in Sources */,
+				49E775111997785600225D8E /* CMDRequestViewController.m in Sources */,
 				49061A7B198142CD00DFC8B4 /* CMDLikeProductionView.m in Sources */,
+				49E7750E1997783600225D8E /* CMDCommentEditViewController.m in Sources */,
 				49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */,
 				49B6AF2A19952FEC00FBD804 /* CMDHukidashiView.m in Sources */,
+				49E7750B1997782600225D8E /* CMDCommentViewController.m in Sources */,
 				492916C9197A937C002AB7F8 /* Comad.xcdatamodeld in Sources */,
 				49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */,
 				49061A751981412400DFC8B4 /* CMDWantProductionView.m in Sources */,

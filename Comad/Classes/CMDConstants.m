@@ -4,6 +4,7 @@
 
 // StoryBoardIdentifier
 static NSString * const kCMDStoryBoardMainIdentifier           = @"MainStoryboard";
+static NSString * const kCMDStoryBoardCommentIdentifier        = @"CommentStoryboard";
 static NSString * const kCMDStoryBoardListIdentifier           = @"ListStoryboard";
 static NSString * const kCMDStoryBoardProductionListIdentifier = @"ProductionListStoryboard";
 static NSString * const kCMDStoryBoardSettingsIdentifier       = @"SettingsStoryboard";
