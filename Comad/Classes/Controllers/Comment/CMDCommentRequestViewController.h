@@ -1,5 +1,5 @@
 //
-//  CMDRequestViewController.h
+//  CMDCommentRequestViewController.h
 //  Comad
 //
 //  Created by AsanoYuki on 2014/08/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMDRequestViewController : UIViewController
+@interface CMDCommentRequestViewController : UIViewController
 
 @end

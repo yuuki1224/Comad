@@ -1,18 +1,18 @@
 //
-//  CMDRequestViewController.m
+//  CMDCommentRequestViewController.m
 //  Comad
 //
 //  Created by AsanoYuki on 2014/08/10.
 //  Copyright (c) 2014年 AsanoYuki. All rights reserved.
 //
 
-#import "CMDRequestViewController.h"
+#import "CMDCommentRequestViewController.h"
 
-@interface CMDRequestViewController ()
+@interface CMDCommentRequestViewController ()
 
 @end
 
-@implementation CMDRequestViewController
+@implementation CMDCommentRequestViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
