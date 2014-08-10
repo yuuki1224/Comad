@@ -39,15 +39,6 @@ CGFloat const kHukidashiHeight = 200;
     return [listStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([CMDWatchedListViewController class])];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
 {
     
@@ -117,6 +108,12 @@ CGFloat const kHukidashiHeight = 200;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CMDWatchedListTableCell"];
+    
+    UIImageView *productionImage = (UIImageView *)[cell viewWithTag:1];
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedProductionImageView:)];
+    [productionImage addGestureRecognizer:tapGestureRecognizer];
+    
     UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressCell:)];
     
     [cell addGestureRecognizer:longPressGestureRecognizer];
@@ -138,8 +135,10 @@ CGFloat const kHukidashiHeight = 200;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
     [self.navigationController pushViewController:productionPageViewController animated:YES];
+     */
 }
 
 #pragma mark - UILongPressGestureRecognizer
@@ -176,6 +175,12 @@ CGFloat const kHukidashiHeight = 200;
     UITapGestureRecognizer *tapGestureRecognizer = (UITapGestureRecognizer *)sender;
     
     [_backView removeFromSuperview];
+}
+
+- (void)tappedProductionImageView:(id)sender
+{
+    CMDProductionPageViewController *productionPageViewController = [CMDProductionPageViewController productionPageViewController];
+    [self.navigationController pushViewController:productionPageViewController animated:YES];
 }
 
 @end

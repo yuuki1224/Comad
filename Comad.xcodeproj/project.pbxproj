@@ -41,6 +41,7 @@
 		49A3A9301994ACE800B0AAB5 /* ListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A3A92F1994ACE800B0AAB5 /* ListStoryboard.storyboard */; };
 		49A3A9331994BB2700B0AAB5 /* CMDIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A3A9321994BB2700B0AAB5 /* CMDIntroductionViewController.m */; };
 		49B6AF2A19952FEC00FBD804 /* CMDHukidashiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */; };
+		49E775071997777400225D8E /* CommentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E775061997777400225D8E /* CommentStoryboard.storyboard */; };
 		49E84AB81990E5BA00580F4E /* _CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AB71990E5BA00580F4E /* _CMDUser.m */; };
 		49E84ABB1990E5C400580F4E /* CMDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84ABA1990E5C400580F4E /* CMDUser.m */; };
 		49E84AC11992200300580F4E /* CMDUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E84AC01992200300580F4E /* CMDUserViewModel.m */; };
@@ -116,6 +117,7 @@
 		49A3A9321994BB2700B0AAB5 /* CMDIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDIntroductionViewController.m; sourceTree = "<group>"; };
 		49B6AF2819952FEC00FBD804 /* CMDHukidashiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDHukidashiView.h; sourceTree = "<group>"; };
 		49B6AF2919952FEC00FBD804 /* CMDHukidashiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDHukidashiView.m; sourceTree = "<group>"; };
+		49E775061997777400225D8E /* CommentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommentStoryboard.storyboard; sourceTree = "<group>"; };
 		49E84AB61990E5BA00580F4E /* _CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CMDUser.h; sourceTree = "<group>"; };
 		49E84AB71990E5BA00580F4E /* _CMDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CMDUser.m; sourceTree = "<group>"; };
 		49E84AB91990E5C400580F4E /* CMDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDUser.h; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				492916E8197A93CC002AB7F8 /* MainStoryboard.storyboard */,
 				49A3A92F1994ACE800B0AAB5 /* ListStoryboard.storyboard */,
+				49E775061997777400225D8E /* CommentStoryboard.storyboard */,
 				4916427B197D6CB100F5892E /* ProductionListStoryboard.storyboard */,
 				49164279197D665A00F5892E /* SettingsStoryboard.storyboard */,
 				49164277197D632300F5892E /* CustomViewStoryboard.storyboard */,
@@ -528,6 +531,7 @@
 				492916C0197A937C002AB7F8 /* InfoPlist.strings in Resources */,
 				4916427C197D6CB100F5892E /* ProductionListStoryboard.storyboard in Resources */,
 				492916CB197A937C002AB7F8 /* Images.xcassets in Resources */,
+				49E775071997777400225D8E /* CommentStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
