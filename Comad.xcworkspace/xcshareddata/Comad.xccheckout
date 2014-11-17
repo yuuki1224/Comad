@@ -10,29 +10,29 @@
 	<string>Comad</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DDEE6A10-094D-41F0-8811-20CE322399CA</key>
+		<key>72185E2D93F09462AC6FA6099261CD1BF9C6CC42</key>
 		<string>https://github.com/yuuki1224/Comad.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Comad.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DDEE6A10-094D-41F0-8811-20CE322399CA</key>
+		<key>72185E2D93F09462AC6FA6099261CD1BF9C6CC42</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yuuki1224/Comad.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DDEE6A10-094D-41F0-8811-20CE322399CA</string>
+	<string>72185E2D93F09462AC6FA6099261CD1BF9C6CC42</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DDEE6A10-094D-41F0-8811-20CE322399CA</string>
+			<string>72185E2D93F09462AC6FA6099261CD1BF9C6CC42</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Comad</string>
 		</dict>
