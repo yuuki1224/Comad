@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CMDComadAPIClient.h"
 
 @interface ComadTests : XCTestCase
 
@@ -28,7 +29,16 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    __block BOOL isFinished = NO;
+    CMDComadAPIClient *sharedClient = [CMDComadAPIClient sharedClient];
+    [sharedClient getTimeLineProductionsWithUserId:@1 completion:^(NSArray *results, NSError *error) {
+        isFinished = YES;
+    }];
+    
+    // Blocksの中が実行されるまで待つ
+    while (!isFinished) {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    }
 }
 
 @end

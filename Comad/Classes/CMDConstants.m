@@ -27,4 +27,7 @@ static NSString * const kCMDStoryBoardSegueUserIdentifier         = @"CMDUserSeg
 static NSString * const kCMDStoryBoardSegueSearchFriendIdentifier = @"CMDSearchFriendSegue";
 static NSString * const kCMDStoryBoardSegueProductionCommentIdentifier = @"CMDProductionCommentSegue";
 
+// Network
+static NSString * const kCMDComadAPIHostURL = @"http://0.0.0.0:3000";
+
 #endif
